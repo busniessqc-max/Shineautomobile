@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Prise de rendez-vous</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
 
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-8 rounded-3xl shadow-xl w-full max-w-2xl">
+    <h1 class="text-3xl font-bold mb-6">Prise de rendez-vous</h1>
+
+    <form id="form" class="space-y-4">
+
+        <input required type="text" placeholder="Nom complet" class="w-full p-4 border rounded-xl" id="nom">
+
+        <input required type="text" id="service" class="w-full p-4 border rounded-xl bg-gray-100" readonly>
+
+        <input required type="number" min="1" value="1" id="nbVoiture" class="w-full p-4 border rounded-xl" placeholder="Nombre de voitures">
+
+        <div id="voitureContainer"></div>
+
+        <input required type="tel" placeholder="Numéro de téléphone" class="w-full p-4 border rounded-xl" id="tel">
+
+        <input required type="email" placeholder="Email" class="w-full p-4 border rounded-xl" id="email">
+
+        <input required type="text" placeholder="Adresse domicile" class="w-full p-4 border rounded-xl" id="adresse">
+
+        <input required type="date" class="w-full p-4 border rounded-xl" id="date">
+
+        <div class="text-xl font-bold" id="montant">Montant: </div>
+
+        <button type="submit" class="w-full bg-black text-white p-4 rounded-xl text-xl">
+            Envoyer
+        </button>
+    </form>
+</div>
+
+<script>
+const prix = {
+    "Lavage extérieur 50$": 50,
+    "Lavage extérieur super 60$": 60,
+    "Lavage intérieur 100$": 100,
+    "Lavage intérieur super 150$": 150,
+    "Lavage complet 200$": 200,
+    "Lavage complet super 250$": 250,
+    "Shampoing sièges 50$": 50
+};
+
+const params = new URLSearchParams(window.location.search);
+const service = params.get("service") || "";
+
+document.getElementById("service").value = service;
+
+function updateMontant() {
+    const nb = document.getElementById("nbVoiture").value;
+    const prixService = prix[service] || 0;
+    document.getElementById("montant").innerText =
+        "Montant: " + (prixService * nb) + "$";
+}
+
+document.getElementById("nbVoiture").addEventListener("input", () => {
+    const container = document.getElementById("voitureContainer");
+    container.innerHTML = "";
+
+    const nb = document.getElementById("nbVoiture").value;
+
+    for (let i = 0; i < nb; i++) {
+        container.innerHTML += `
+            <input required type="text" placeholder="Type de voiture ${i+1}" class="w-full p-4 border rounded-xl">
+        `;
+    }
+
+    updateMontant();
+});
+
+updateMontant();
+
+document.getElementById("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    alert("Demande envoyée ! (simulation)");
+
+    // OPTION EMAIL (ouvre mail client)
+    window.location.href = `mailto:info.shineautomobile@gmail.com?subject=Rendez-vous&body=
+Nom: ${document.getElementById("nom").value}
+Service: ${service}
+Téléphone: ${document.getElementById("tel").value}
+Email: ${document.getElementById("email").value}
+Adresse: ${document.getElementById("adresse").value}
+Date: ${document.getElementById("date").value}`;
+});
+</script>
+
+</body>
+</html>
