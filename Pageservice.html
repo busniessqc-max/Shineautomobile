@@ -12,28 +12,26 @@
         .heading-font { font-family: 'Space Grotesk', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 min-h-screen">
 
     <div class="max-w-3xl mx-auto px-6 py-12">
         <a href="index.html" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-8">
-            <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
+            ← Retour à l'accueil
         </a>
 
         <h1 class="heading-font text-5xl font-semibold text-center mb-2">Prendre Rendez-vous</h1>
-        <p class="text-center text-gray-600 mb-12">ShineAutomobile - Lavage à domicile à Sherbrooke et environs</p>
+        <p class="text-center text-gray-600 mb-12">ShineAutomobile - Lavage auto à domicile</p>
 
-        <form id="bookingForm" class="bg-white rounded-3xl shadow p-10 space-y-8">
+        <form id="bookingForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-8">
             
-            <!-- Nom -->
             <div>
                 <label class="block text-sm font-medium mb-2">Nom complet</label>
                 <input type="text" id="nom" required class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
             </div>
 
-            <!-- Service (pré-rempli si venant d'index) -->
             <div>
                 <label class="block text-sm font-medium mb-2">Service choisi</label>
-                <select id="service" required class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+                <select id="service" required onchange="calculerTotal()" class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
                     <option value="">-- Sélectionnez un service --</option>
                     <option value="Lavage Extérieur">Lavage Extérieur - 50$</option>
                     <option value="Lavage Extérieur Super">Lavage Extérieur Super - 60$</option>
@@ -51,7 +49,6 @@
                 </select>
             </div>
 
-            <!-- Nombre de voitures -->
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <label class="block text-sm font-medium mb-2">Nombre de voitures</label>
@@ -69,7 +66,6 @@
                 </div>
             </div>
 
-            <!-- Téléphone & Adresse -->
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <label class="block text-sm font-medium mb-2">Numéro de téléphone</label>
@@ -81,7 +77,6 @@
                 </div>
             </div>
 
-            <!-- Date -->
             <div>
                 <label class="block text-sm font-medium mb-2">Date souhaitée</label>
                 <input type="date" id="date" required class="w-full border border-gray-300 rounded-2xl px-5 py-4">
@@ -104,7 +99,7 @@
     </div>
 
     <script>
-        // Récupérer le service depuis l'URL
+        // Récupérer le service depuis l'URL et le pré-sélectionner
         function getUrlParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
@@ -113,35 +108,38 @@
         window.onload = function() {
             const serviceFromUrl = getUrlParameter('service');
             if (serviceFromUrl) {
-                const select = document.getElementById('service');
-                select.value = serviceFromUrl;
+                document.getElementById('service').value = serviceFromUrl;
                 calculerTotal();
             }
         };
 
-        // Calcul simple du total (basé sur le prix indiqué dans le select)
         function calculerTotal() {
             const serviceSelect = document.getElementById('service');
             const nbVoitures = parseInt(document.getElementById('nbVoitures').value) || 1;
             let basePrice = 0;
 
-            const selectedText = serviceSelect.options[serviceSelect.selectedIndex].text;
-            if (selectedText.includes('50$')) basePrice = 50;
-            else if (selectedText.includes('60$')) basePrice = 60;
-            else if (selectedText.includes('75$')) basePrice = 75;
-            else if (selectedText.includes('125$')) basePrice = 125;
-            else if (selectedText.includes('150$')) basePrice = 150;
-            else if (selectedText.includes('200$')) basePrice = 200;
-            else if (selectedText.includes('40$')) basePrice = 40;
-            else if (selectedText.includes('35$')) basePrice = 35;
+            const selectedText = serviceSelect.options[serviceSelect.selectedIndex].text || "";
+            
+            if (selectedText.includes("50$")) basePrice = 50;
+            else if (selectedText.includes("60$")) basePrice = 60;
+            else if (selectedText.includes("75$")) basePrice = 75;
+            else if (selectedText.includes("125$")) basePrice = 125;
+            else if (selectedText.includes("150$")) basePrice = 150;
+            else if (selectedText.includes("200$")) basePrice = 200;
+            else if (selectedText.includes("40$")) basePrice = 40;
+            else if (selectedText.includes("35$")) basePrice = 35;
 
             const total = basePrice * nbVoitures;
-            document.getElementById('totalPrice').textContent = total + '$';
+            document.getElementById('totalPrice').textContent = total + "$";
         }
 
         function envoyerReservation() {
-            alert("✅ Demande de rendez-vous envoyée avec succès !\n\nNous vous contacterons rapidement au numéro fourni.");
-            // Ici tu pourras plus tard connecter à un vrai backend ou Google Forms
+            const nom = document.getElementById('nom').value;
+            if (!nom) {
+                alert("Veuillez entrer votre nom.");
+                return;
+            }
+            alert("✅ Demande de rendez-vous envoyée avec succès !\n\nNous vous contacterons rapidement au " + document.getElementById('telephone').value);
         }
     </script>
 </body>
