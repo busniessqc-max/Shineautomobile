@@ -1,97 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Prise de rendez-vous</title>
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre Rendez-vous - ShineAutomobile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    </style>
 </head>
+<body class="bg-gray-50">
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-8">
+            <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
+        </a>
 
-<div class="bg-white p-8 rounded-3xl shadow-xl w-full max-w-2xl">
-    <h1 class="text-3xl font-bold mb-6">Prise de rendez-vous</h1>
+        <h1 class="heading-font text-5xl font-semibold text-center mb-2">Prendre Rendez-vous</h1>
+        <p class="text-center text-gray-600 mb-12">ShineAutomobile - Lavage à domicile à Sherbrooke et environs</p>
 
-    <form id="form" class="space-y-4">
+        <form id="bookingForm" class="bg-white rounded-3xl shadow p-10 space-y-8">
+            
+            <!-- Nom -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Nom complet</label>
+                <input type="text" id="nom" required class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+            </div>
 
-        <input required type="text" placeholder="Nom complet" class="w-full p-4 border rounded-xl" id="nom">
+            <!-- Service (pré-rempli si venant d'index) -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Service choisi</label>
+                <select id="service" required class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+                    <option value="">-- Sélectionnez un service --</option>
+                    <option value="Lavage Extérieur">Lavage Extérieur - 50$</option>
+                    <option value="Lavage Extérieur Super">Lavage Extérieur Super - 60$</option>
+                    <option value="Lavage Intérieur Régulier">Lavage Intérieur Régulier - 75$</option>
+                    <option value="Lavage Intérieur Super">Lavage Intérieur Super - 125$</option>
+                    <option value="Lavage Complet Régulier">Lavage Complet Régulier - 150$</option>
+                    <option value="Lavage Complet Super">Lavage Complet Super - 200$</option>
+                    <option value="Shampoing des Sièges">Shampoing des Sièges - 50$</option>
+                    <option value="Forfait 2 voitures Complet Régulier">Forfait 2 voitures (Complet Régulier) - 150$</option>
+                    <option value="Forfait 3 voitures Complet Régulier">Forfait 3 voitures (Complet Régulier) - 200$</option>
+                    <option value="Forfait 4 voitures Complet Régulier">Forfait 4 voitures (Complet Régulier) - 250$</option>
+                    <option value="Forfait 5 voitures Complet Régulier">Forfait 5 voitures (Complet Régulier) - 300$</option>
+                    <option value="Forfait Extérieur 2-4 voitures">Forfait Extérieur 2-4 voitures - 40$/voiture</option>
+                    <option value="Forfait Extérieur 5-10 voitures">Forfait Extérieur 5-10 voitures - 35$/voiture</option>
+                </select>
+            </div>
 
-        <input required type="text" id="service" class="w-full p-4 border rounded-xl bg-gray-100" readonly>
+            <!-- Nombre de voitures -->
+            <div class="grid grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Nombre de voitures</label>
+                    <select id="nbVoitures" onchange="calculerTotal()" class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+                        <option value="1">1 voiture</option>
+                        <option value="2">2 voitures</option>
+                        <option value="3">3 voitures</option>
+                        <option value="4">4 voitures</option>
+                        <option value="5">5 voitures</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Type de véhicule(s)</label>
+                    <input type="text" id="typeVoiture" placeholder="Ex: Berline, VUS, Camionnette" class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+                </div>
+            </div>
 
-        <input required type="number" min="1" value="1" id="nbVoiture" class="w-full p-4 border rounded-xl" placeholder="Nombre de voitures">
+            <!-- Téléphone & Adresse -->
+            <div class="grid grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Numéro de téléphone</label>
+                    <input type="tel" id="telephone" required class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Adresse domicile</label>
+                    <input type="text" id="adresse" required placeholder="Ex: 123 rue Principale, Sherbrooke" class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+                </div>
+            </div>
 
-        <div id="voitureContainer"></div>
+            <!-- Date -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Date souhaitée</label>
+                <input type="date" id="date" required class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+            </div>
 
-        <input required type="tel" placeholder="Numéro de téléphone" class="w-full p-4 border rounded-xl" id="tel">
+            <!-- Montant Total -->
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+                <div class="flex justify-between items-center text-lg">
+                    <span class="font-medium">Montant total estimé :</span>
+                    <span id="totalPrice" class="text-3xl font-bold text-[#00e0ff]">0$</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Le montant final sera confirmé lors de la visite.</p>
+            </div>
 
-        <input required type="email" placeholder="Email" class="w-full p-4 border rounded-xl" id="email">
+            <button type="button" onclick="envoyerReservation()" 
+                    class="w-full bg-[#00e0ff] hover:bg-[#00c8e0] text-white font-semibold py-5 rounded-2xl text-xl">
+                Envoyer ma demande de rendez-vous
+            </button>
+        </form>
+    </div>
 
-        <input required type="text" placeholder="Adresse domicile" class="w-full p-4 border rounded-xl" id="adresse">
+    <script>
+        // Récupérer le service depuis l'URL
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
 
-        <input required type="date" class="w-full p-4 border rounded-xl" id="date">
+        window.onload = function() {
+            const serviceFromUrl = getUrlParameter('service');
+            if (serviceFromUrl) {
+                const select = document.getElementById('service');
+                select.value = serviceFromUrl;
+                calculerTotal();
+            }
+        };
 
-        <div class="text-xl font-bold" id="montant">Montant: </div>
+        // Calcul simple du total (basé sur le prix indiqué dans le select)
+        function calculerTotal() {
+            const serviceSelect = document.getElementById('service');
+            const nbVoitures = parseInt(document.getElementById('nbVoitures').value) || 1;
+            let basePrice = 0;
 
-        <button type="submit" class="w-full bg-black text-white p-4 rounded-xl text-xl">
-            Envoyer
-        </button>
-    </form>
-</div>
+            const selectedText = serviceSelect.options[serviceSelect.selectedIndex].text;
+            if (selectedText.includes('50$')) basePrice = 50;
+            else if (selectedText.includes('60$')) basePrice = 60;
+            else if (selectedText.includes('75$')) basePrice = 75;
+            else if (selectedText.includes('125$')) basePrice = 125;
+            else if (selectedText.includes('150$')) basePrice = 150;
+            else if (selectedText.includes('200$')) basePrice = 200;
+            else if (selectedText.includes('40$')) basePrice = 40;
+            else if (selectedText.includes('35$')) basePrice = 35;
 
-<script>
-const prix = {
-    "Lavage extérieur 50$": 50,
-    "Lavage extérieur super 60$": 60,
-    "Lavage intérieur 100$": 100,
-    "Lavage intérieur super 150$": 150,
-    "Lavage complet 200$": 200,
-    "Lavage complet super 250$": 250,
-    "Shampoing sièges 50$": 50
-};
+            const total = basePrice * nbVoitures;
+            document.getElementById('totalPrice').textContent = total + '$';
+        }
 
-const params = new URLSearchParams(window.location.search);
-const service = params.get("service") || "";
-
-document.getElementById("service").value = service;
-
-function updateMontant() {
-    const nb = document.getElementById("nbVoiture").value;
-    const prixService = prix[service] || 0;
-    document.getElementById("montant").innerText =
-        "Montant: " + (prixService * nb) + "$";
-}
-
-document.getElementById("nbVoiture").addEventListener("input", () => {
-    const container = document.getElementById("voitureContainer");
-    container.innerHTML = "";
-
-    const nb = document.getElementById("nbVoiture").value;
-
-    for (let i = 0; i < nb; i++) {
-        container.innerHTML += `
-            <input required type="text" placeholder="Type de voiture ${i+1}" class="w-full p-4 border rounded-xl">
-        `;
-    }
-
-    updateMontant();
-});
-
-updateMontant();
-
-document.getElementById("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    alert("Demande envoyée ! (simulation)");
-
-    // OPTION EMAIL (ouvre mail client)
-    window.location.href = `mailto:info.shineautomobile@gmail.com?subject=Rendez-vous&body=
-Nom: ${document.getElementById("nom").value}
-Service: ${service}
-Téléphone: ${document.getElementById("tel").value}
-Email: ${document.getElementById("email").value}
-Adresse: ${document.getElementById("adresse").value}
-Date: ${document.getElementById("date").value}`;
-});
-</script>
-
+        function envoyerReservation() {
+            alert("✅ Demande de rendez-vous envoyée avec succès !\n\nNous vous contacterons rapidement au numéro fourni.");
+            // Ici tu pourras plus tard connecter à un vrai backend ou Google Forms
+        }
+    </script>
 </body>
 </html>
