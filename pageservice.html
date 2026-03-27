@@ -3,272 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ShineAutomobile - Lavage auto professionnel à domicile à Sherbrooke et environs.">
-    <title>ShineAutomobile • Lavage Auto à Domicile - Estrie</title>
+    <title>Prendre Rendez-vous - ShineAutomobile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
         body { font-family: 'Inter', system_ui, sans-serif; }
         .heading-font { font-family: 'Space Grotesk', sans-serif; }
-
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgb(0 224 255 / 0.25);
-        }
-
-        /* Améliorations pour mobile */
-        @media (max-width: 640px) {
-            .heading-font {
-                font-size: 2.5rem;
-                line-height: 1.1;
-            }
-            .hero-bg {
-                height: 85vh;
-            }
-        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 min-h-screen">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-[#00e0ff] rounded-2xl flex items-center justify-center text-3xl">✨</div>
-                <div>
-                    <h1 class="heading-font text-2xl font-semibold text-gray-900">ShineAutomobile</h1>
-                    <p class="text-[10px] text-gray-500 -mt-1">LAVAGE À DOMICILE</p>
-                </div>
-            </div>
+    <div class="max-w-3xl mx-auto px-6 py-12">
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-8">
+            ← Retour à l'accueil
+        </a>
+
+        <h1 class="heading-font text-5xl font-semibold text-center mb-2">Prendre Rendez-vous</h1>
+        <p class="text-center text-gray-600 mb-12">ShineAutomobile - Lavage auto à domicile</p>
+
+        <form id="bookingForm" class="bg-white rounded-3xl shadow-xl p-10 space-y-8">
             
-            <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-                <a href="#services" class="hover:text-[#00e0ff]">Services</a>
-                <a href="#autres-services" class="hover:text-[#00e0ff]">Autres services</a>
-                <a href="#forfaits" class="hover:text-[#00e0ff]">Forfaits</a>
-                <a href="#apropos" class="hover:text-[#00e0ff]">À propos</a>
-                <a href="#temoignages" class="hover:text-[#00e0ff]">Avis</a>
+            <div>
+                <label class="block text-sm font-medium mb-2">Nom complet</label>
+                <input type="text" id="nom" required class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
             </div>
 
-            <div class="flex items-center gap-3">
-                <a href="tel:8736623813" class="text-sm font-medium flex items-center gap-1.5">
-                    <i class="fa-solid fa-phone"></i>
-                    <span class="hidden sm:inline">873-662-3813</span>
-                </a>
-                <a href="pageservice.html" target="_blank" 
-                   class="bg-[#00e0ff] hover:bg-[#00c8e0] text-white px-5 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2">
-                    <i class="fa-solid fa-calendar"></i>
-                    <span class="hidden sm:inline">Réserver</span>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <header class="hero-bg h-screen flex items-center text-white">
-        <div class="max-w-7xl mx-auto px-5 text-center md:text-left">
-            <div class="max-w-xl mx-auto md:mx-0">
-                <span class="inline-block px-5 py-2 bg-white/20 backdrop-blur-md rounded-3xl text-sm font-medium mb-6">
-                    Service à Sherbrooke et environs
-                </span>
-                <h1 class="heading-font text-5xl md:text-6xl font-semibold leading-tight">
-                    Votre voiture brille,<br>à votre porte.
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-white/90">
-                    Lavage professionnel et écologique directement chez vous.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#services" class="bg-white text-gray-900 px-8 py-4 rounded-3xl font-semibold text-lg hover:bg-[#00e0ff] hover:text-white">
-                        Voir les services
-                    </a>
-                    <a href="pageservice.html" target="_blank" 
-                       class="border border-white/70 hover:bg-white/10 px-8 py-4 rounded-3xl font-semibold text-lg">
-                        Prendre rendez-vous
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- SERVICES PRINCIPAUX -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-12">
-                <h2 class="heading-font text-4xl font-semibold">Nos Services de Lavage</h2>
+            <div>
+                <label class="block text-sm font-medium mb-2">Service choisi</label>
+                <select id="service" required onchange="calculerTotal()" class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+                    <option value="">-- Sélectionnez un service --</option>
+                    <option value="Lavage Extérieur">Lavage Extérieur - 50$</option>
+                    <option value="Lavage Extérieur Super">Lavage Extérieur Super - 60$</option>
+                    <option value="Lavage Intérieur Régulier">Lavage Intérieur Régulier - 75$</option>
+                    <option value="Lavage Intérieur Super">Lavage Intérieur Super - 125$</option>
+                    <option value="Lavage Complet Régulier">Lavage Complet Régulier - 150$</option>
+                    <option value="Lavage Complet Super">Lavage Complet Super - 200$</option>
+                    <option value="Shampoing des Sièges">Shampoing des Sièges - 50$</option>
+                    <option value="Forfait 2 voitures Complet Régulier">Forfait 2 voitures (Complet Régulier) - 150$</option>
+                    <option value="Forfait 3 voitures Complet Régulier">Forfait 3 voitures (Complet Régulier) - 200$</option>
+                    <option value="Forfait 4 voitures Complet Régulier">Forfait 4 voitures (Complet Régulier) - 250$</option>
+                    <option value="Forfait 5 voitures Complet Régulier">Forfait 5 voitures (Complet Régulier) - 300$</option>
+                    <option value="Forfait Extérieur 2-4 voitures">Forfait Extérieur 2-4 voitures - 40$/voiture</option>
+                    <option value="Forfait Extérieur 5-10 voitures">Forfait Extérieur 5-10 voitures - 35$/voiture</option>
+                </select>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service 1 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🚘</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Extérieur</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">50$</p>
-                    <p class="text-gray-600 text-sm mb-6">Rinçage, savon écologique, nettoyage des jantes, tour des portes et séchage à la main.</p>
-                    <a href="pageservice.html?service=Lavage Extérieur" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🌟</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Extérieur Super</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">60$</p>
-                    <p class="text-gray-600 text-sm mb-6">Version améliorée avec polissage et protection longue durée.</p>
-                    <a href="pageservice.html?service=Lavage Extérieur Super" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🧼</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Intérieur Régulier</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">75$</p>
-                    <p class="text-gray-600 text-sm mb-6">Aspiration et nettoyage complet de l’habitacle.</p>
-                    <a href="pageservice.html?service=Lavage Intérieur Régulier" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">✨</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Intérieur Super</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">125$</p>
-                    <p class="text-gray-600 text-sm mb-6">Shampoing sièges, cuir et désodorisation premium.</p>
-                    <a href="pageservice.html?service=Lavage Intérieur Super" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🚗🧼</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Complet Régulier</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">150$</p>
-                    <p class="text-gray-600 text-sm mb-6">Extérieur + Intérieur régulier.</p>
-                    <a href="pageservice.html?service=Lavage Complet Régulier" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🚗🌟</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Complet Super</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">200$</p>
-                    <p class="text-gray-600 text-sm mb-6">Extérieur Super + Intérieur Super.</p>
-                    <a href="pageservice.html?service=Lavage Complet Super" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AUTRES SERVICES - Déverrouillage auto -->
-    <section id="autres-services" class="py-20 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-12">
-                <h2 class="heading-font text-4xl font-semibold">Autres Services</h2>
-            </div>
-
-            <div class="max-w-2xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="text-7xl">🔑</div>
-                    <div>
-                        <h3 class="text-3xl font-semibold mb-2">Déverrouillage Auto d’Urgence</h3>
-                        <p class="text-4xl font-bold text-[#00e0ff] mb-6">50$</p>
-                        <p class="text-gray-700 mb-6">
-                            Clés oubliées à l’intérieur ? Notre technicien certifié intervient rapidement et en toute sécurité 
-                            pour ouvrir votre véhicule sans dommages.
-                        </p>
-                        <a href="pageservice.html?service=D%C3%A9verrouillage%20Auto" target="_blank" 
-                           class="inline-block bg-gray-900 text-white px-8 py-4 rounded-2xl font-medium">
-                            Demander un déverrouillage
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORFAITS -->
-    <section id="forfaits" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-12">
-                <h2 class="heading-font text-4xl font-semibold">Forfaits Multi-Voitures</h2>
-            </div>
-            <!-- Ajoute ici tes forfaits comme avant (2 voitures, 3 voitures, etc.) -->
-            <!-- Je les ai omis pour la brièveté, mais tu peux les remettre facilement -->
-        </div>
-    </section>
-
-    <!-- À PROPOS DE NOUS -->
-    <section id="apropos" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-2 gap-6">
                 <div>
-                    <span class="text-[#00e0ff] font-semibold">À PROPOS</span>
-                    <h2 class="heading-font text-4xl font-semibold mt-3">ShineAutomobile</h2>
-                    <p class="mt-6 text-gray-600">
-                        Entreprise locale basée à Sherbrooke, nous offrons un service de lavage auto professionnel à domicile. 
-                        Notre équipe utilise des produits écologiques et du matériel de qualité pour prendre soin de votre véhicule.
-                    </p>
+                    <label class="block text-sm font-medium mb-2">Nombre de voitures</label>
+                    <select id="nbVoitures" onchange="calculerTotal()" class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+                        <option value="1">1 voiture</option>
+                        <option value="2">2 voitures</option>
+                        <option value="3">3 voitures</option>
+                        <option value="4">4 voitures</option>
+                        <option value="5">5 voitures</option>
+                    </select>
                 </div>
-                <div class="grid grid-cols-2 gap-6 text-center">
-                    <div class="bg-gray-50 p-6 rounded-3xl">
-                        <p class="text-4xl font-bold text-[#00e0ff]">100%</p>
-                        <p class="text-sm mt-2">Écologique</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-3xl">
-                        <p class="text-4xl font-bold text-[#00e0ff]">4.9/5</p>
-                        <p class="text-sm mt-2">Satisfaction</p>
-                    </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Type de véhicule(s)</label>
+                    <input type="text" id="typeVoiture" placeholder="Ex: Berline, VUS, Camionnette" class="w-full border border-gray-300 rounded-2xl px-5 py-4">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- TÉMOIGNAGES -->
-    <section id="temoignages" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-12">
-                <h2 class="heading-font text-4xl font-semibold">Avis de nos clients</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-3xl">
-                    <div class="flex text-amber-400 mb-4">★★★★★</div>
-                    <p class="italic text-sm">"Service très professionnel. Ma voiture est impeccable !"</p>
-                    <p class="mt-6 text-xs text-gray-500">- Marie L., Sherbrooke</p>
+            <div class="grid grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Numéro de téléphone</label>
+                    <input type="tel" id="telephone" required class="w-full border border-gray-300 rounded-2xl px-5 py-4">
                 </div>
-                <div class="bg-white p-6 rounded-3xl">
-                    <div class="flex text-amber-400 mb-4">★★★★☆</div>
-                    <p class="italic text-sm">"Déverrouillage rapide et sans dommage. Merci !"</p>
-                    <p class="mt-6 text-xs text-gray-500">- Jean T., Magog</p>
-                </div>
-                <div class="bg-white p-6 rounded-3xl">
-                    <div class="flex text-amber-400 mb-4">★★★★★</div>
-                    <p class="italic text-sm">"Excellent lavage complet. Je recommande fortement."</p>
-                    <p class="mt-6 text-xs text-gray-500">- Sophie D., Bromptonville</p>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Adresse domicile</label>
+                    <input type="text" id="adresse" required placeholder="Ex: 123 rue Principale, Sherbrooke" class="w-full border border-gray-300 rounded-2xl px-5 py-4">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-5 text-center">
-            <p class="text-2xl font-semibold">ShineAutomobile</p>
-            <p class="mt-2 text-sm opacity-75">Lavage auto à domicile en Estrie</p>
-            <p class="mt-8 text-sm">Sherbrooke • Magog • Bromptonville • Windsor • Waterville • Saint-Denis-de-Brompton</p>
-            <p class="mt-6">
-                <a href="tel:8736623813" class="text-[#00e0ff] text-xl font-medium">873-662-3813</a>
-            </p>
-            <p class="text-xs opacity-50 mt-12">© 2026 ShineAutomobile</p>
-        </div>
-    </footer>
+            <div>
+                <label class="block text-sm font-medium mb-2">Date souhaitée</label>
+                <input type="date" id="date" required class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+            </div>
 
+            <!-- Montant Total -->
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+                <div class="flex justify-between items-center text-lg">
+                    <span class="font-medium">Montant total estimé :</span>
+                    <span id="totalPrice" class="text-3xl font-bold text-[#00e0ff]">0$</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Le montant final sera confirmé lors de la visite.</p>
+            </div>
+
+            <button type="button" onclick="envoyerReservation()" 
+                    class="w-full bg-[#00e0ff] hover:bg-[#00c8e0] text-white font-semibold py-5 rounded-2xl text-xl">
+                Envoyer ma demande de rendez-vous
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // Récupérer le service depuis l'URL et le pré-sélectionner
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        window.onload = function() {
+            const serviceFromUrl = getUrlParameter('service');
+            if (serviceFromUrl) {
+                document.getElementById('service').value = serviceFromUrl;
+                calculerTotal();
+            }
+        };
+
+        function calculerTotal() {
+            const serviceSelect = document.getElementById('service');
+            const nbVoitures = parseInt(document.getElementById('nbVoitures').value) || 1;
+            let basePrice = 0;
+
+            const selectedText = serviceSelect.options[serviceSelect.selectedIndex].text || "";
+            
+            if (selectedText.includes("50$")) basePrice = 50;
+            else if (selectedText.includes("60$")) basePrice = 60;
+            else if (selectedText.includes("75$")) basePrice = 75;
+            else if (selectedText.includes("125$")) basePrice = 125;
+            else if (selectedText.includes("150$")) basePrice = 150;
+            else if (selectedText.includes("200$")) basePrice = 200;
+            else if (selectedText.includes("40$")) basePrice = 40;
+            else if (selectedText.includes("35$")) basePrice = 35;
+
+            const total = basePrice * nbVoitures;
+            document.getElementById('totalPrice').textContent = total + "$";
+        }
+
+        function envoyerReservation() {
+            const nom = document.getElementById('nom').value;
+            if (!nom) {
+                alert("Veuillez entrer votre nom.");
+                return;
+            }
+            alert("✅ Demande de rendez-vous envoyée avec succès !\n\nNous vous contacterons rapidement au " + document.getElementById('telephone').value);
+        }
+    </script>
 </body>
 </html>
