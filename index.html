@@ -3,617 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lavage auto professionnel à domicile à Montréal et ses environs. Services premium, écologiques et sans rendez-vous obligatoire.">
-    <title>PrimeLave • Lavage Auto à Domicile à Montréal</title>
+    <meta name="description" content="ShineAutomobile - Lavage auto professionnel à domicile à Sherbrooke et environs. Service rapide, écologique et brillant.">
+    <title>ShineAutomobile • Lavage Auto à Domicile - Estrie</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
-        :root {
-            --primary: #00d4ff;
-        }
-        
-        * {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms;
-        }
-        
-        .tailwind-ready {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; }
 
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-        }
-        
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
         }
         
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 25px 25px 0 -10px #00d4ff;
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #00d4ff;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        
-        .section-header {
-            position: relative;
-        }
-        
-        .section-header:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(to right, #00d4ff, #0099cc);
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 9999px;
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 224 255 / 0.25);
         }
     </style>
 </head>
-<body class="tailwind-ready">
+<body class="bg-gray-50">
 
     <!-- NAVBAR -->
-    <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
-        <div class="max-w-screen-2xl mx-auto">
-            <div class="px-8 py-5 flex items-center justify-between">
-                
-                <!-- Logo -->
-                <div class="flex items-center gap-x-3">
-                    <div class="w-11 h-11 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-white text-3xl shadow-inner">
-                        🚗
-                    </div>
-                    <div>
-                        <h1 class="heading-font text-3xl tracking-[-1px] font-semibold text-gray-900">PrimeLave</h1>
-                        <p class="text-xs text-gray-500 -mt-1 tracking-[1px]">LAVAGE À DOMICILE</p>
-                    </div>
-                </div>
-
-                <!-- Menu Desktop -->
-                <div class="hidden lg:flex items-center gap-x-10 text-gray-700 font-medium">
-                    <a href="#" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" class="nav-link">Services</a>
-                    <a href="#" onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" class="nav-link">Tarifs</a>
-                    <a href="#" onclick="document.getElementById('comment-ca-marche').scrollIntoView({behavior:'smooth'})" class="nav-link">Comment ça marche</a>
-                    <a href="#" onclick="document.getElementById('temoignages').scrollIntoView({behavior:'smooth'})" class="nav-link">Avis clients</a>
-                    <a href="#" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="nav-link">Nous contacter</a>
-                </div>
-
-                <!-- Actions -->
-                <div class="flex items-center gap-x-4">
-                    <a href="tel:514-555-0123" 
-                       class="flex items-center gap-x-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 h-11 rounded-2xl font-medium text-sm">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>514-555-0123</span>
-                    </a>
-                    
-                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-                            class="bg-[#00d4ff] hover:bg-[#00b8e0] text-white px-8 h-11 rounded-2xl font-semibold flex items-center gap-x-2 shadow-lg shadow-[#00d4ff]/30">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <span>Réserver maintenant</span>
-                    </button>
-
-                    <!-- Mobile menu button -->
-                    <button onclick="toggleMobileMenu()" class="lg:hidden w-11 h-11 flex items-center justify-center text-2xl text-gray-700">
-                        <i id="mobile-icon" class="fa-solid fa-bars"></i>
-                    </button>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-[#00e0ff] rounded-2xl flex items-center justify-center text-4xl">✨</div>
+                <div>
+                    <h1 class="heading-font text-3xl font-semibold text-gray-900">ShineAutomobile</h1>
+                    <p class="text-xs text-gray-500 tracking-widest -mt-1">LAVAGE À DOMICILE</p>
                 </div>
             </div>
             
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden border-t bg-white px-8 py-6">
-                <div class="flex flex-col gap-y-4 text-lg font-medium text-gray-700">
-                    <a href="#" onclick="toggleMobileMenu();document.getElementById('services').scrollIntoView({behavior:'smooth'})" class="py-3">Nos services</a>
-                    <a href="#" onclick="toggleMobileMenu();document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" class="py-3">Tarifs</a>
-                    <a href="#" onclick="toggleMobileMenu();document.getElementById('comment-ca-marche').scrollIntoView({behavior:'smooth'})" class="py-3">Comment ça marche</a>
-                    <a href="#" onclick="toggleMobileMenu();document.getElementById('temoignages').scrollIntoView({behavior:'smooth'})" class="py-3">Avis clients</a>
-                    <a href="#" onclick="toggleMobileMenu();document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="py-3">Nous contacter</a>
-                    <div class="pt-6 border-t">
-                        <a href="tel:514-555-0123" class="flex items-center justify-center gap-x-3 text-xl font-semibold text-gray-900">
-                            <i class="fa-solid fa-phone"></i> 514 555 0123
-                        </a>
-                    </div>
-                </div>
+            <div class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+                <a href="#services" class="hover:text-[#00e0ff]">Services</a>
+                <a href="#forfaits" class="hover:text-[#00e0ff]">Forfaits</a>
+                <a href="#comment-ca-marche" class="hover:text-[#00e0ff]">Comment ça marche</a>
+                <a href="pagerendezvous.html" class="hover:text-[#00e0ff]">Prendre rendez-vous</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="tel:8736623813" class="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-5 py-3 rounded-2xl font-medium">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>873-662-3813</span>
+                </a>
+                <a href="pagerendezvous.html" 
+                   class="bg-[#00e0ff] hover:bg-[#00c8e0] text-white px-6 py-3 rounded-2xl font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-calendar"></i>
+                    Réserver
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header class="hero-bg h-screen min-h-[700px] flex items-center text-white">
-        <div class="max-w-screen-2xl mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl text-sm font-medium border border-white/30">
-                    <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00d4ff] opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-[#00d4ff]"></span>
-                    </span>
-                    Service disponible aujourd’hui à Montréal
-                </div>
-                
-                <h1 class="text-6xl lg:text-7xl font-semibold heading-font leading-[1.1] tracking-[-2px]">
-                    Votre voiture,<br>lavée à votre porte.
+    <header class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl">
+                <span class="inline-block px-5 py-2 bg-white/20 backdrop-blur-md rounded-3xl text-sm font-medium mb-6">
+                    Service disponible à Sherbrooke et ses environs
+                </span>
+                <h1 class="heading-font text-6xl lg:text-7xl font-semibold leading-tight tracking-tight">
+                    Votre voiture brille,<br>à votre porte.
                 </h1>
-                
-                <p class="text-2xl text-white/90 max-w-lg">
-                    Lavage professionnel, écologique et sans stress.<br>
-                    Nous venons chez vous en 2h.
+                <p class="mt-6 text-2xl text-white/90">
+                    Lavage professionnel, écologique et minutieux.<br>
+                    Nous nous déplaçons chez vous à Sherbrooke, Magog, Bromptonville et environs.
                 </p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" 
-                            class="bg-white text-gray-900 hover:bg-[#00d4ff] hover:text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-x-3 shadow-2xl">
-                        <i class="fa-solid fa-car"></i>
-                        Découvrir nos services
-                    </button>
-                    
-                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
-                            class="border border-white/70 hover:bg-white/10 px-8 py-5 rounded-3xl text-xl font-medium flex items-center gap-x-3">
-                        <i class="fa-solid fa-clock"></i>
-                        Réserver en 30 secondes
-                    </button>
-                </div>
-                
-                <div class="flex items-center gap-x-8 text-sm">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-star text-amber-400"></i>
-                        <i class="fa-solid fa-star text-amber-400"></i>
-                        <i class="fa-solid fa-star text-amber-400"></i>
-                        <i class="fa-solid fa-star text-amber-400"></i>
-                        <i class="fa-solid fa-star text-amber-400"></i>
-                        <span class="ml-3 font-medium">4.98/5 • 428 avis</span>
-                    </div>
-                    <div class="flex items-center gap-x-2">
-                        <i class="fa-solid fa-leaf text-emerald-400"></i>
-                        <span class="font-medium">100% écologique</span>
-                    </div>
-                    <div>Montréal • Laval • Rive-Sud • Rive-Nord</div>
-                </div>
-            </div>
-            
-            <!-- Hero visuel -->
-            <div class="hidden lg:flex justify-end">
-                <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20 max-w-xs w-full">
-                    <div class="bg-white text-gray-900 rounded-2xl p-8 text-center">
-                        <div class="text-6xl mb-6">🚘</div>
-                        <h3 class="text-2xl font-semibold mb-2">Prochain passage</h3>
-                        <p class="text-5xl font-bold text-[#00d4ff]">Dans 47 min</p>
-                        <p class="text-gray-600 mt-2">Chez M. Tremblay – Ahuntsic</p>
-                        
-                        <div class="my-8 border-t border-b py-6 grid grid-cols-3 text-center">
-                            <div>
-                                <div class="text-emerald-500 text-3xl">✓</div>
-                                <p class="text-xs font-medium mt-1">Extérieur</p>
-                            </div>
-                            <div>
-                                <div class="text-emerald-500 text-3xl">✓</div>
-                                <p class="text-xs font-medium mt-1">Intérieur</p>
-                            </div>
-                            <div>
-                                <div class="text-emerald-500 text-3xl">✓</div>
-                                <p class="text-xs font-medium mt-1">Cire</p>
-                            </div>
-                        </div>
-                        
-                        <button class="w-full bg-[#00d4ff] text-white h-14 rounded-2xl text-lg font-semibold">
-                            Suivre mon lavage en direct
-                        </button>
-                    </div>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="#services" class="bg-white text-gray-900 px-8 py-4 rounded-3xl font-semibold text-lg hover:bg-[#00e0ff] hover:text-white">
+                        Voir nos services
+                    </a>
+                    <a href="pagerendezvous.html" class="border border-white/70 hover:bg-white/10 px-8 py-4 rounded-3xl font-semibold text-lg">
+                        Prendre rendez-vous
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SERVICES (Section principale demandée) -->
-    <section id="services" class="py-24 bg-gray-50">
-        <div class="max-w-screen-2xl mx-auto px-8">
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="px-6 py-2 bg-[#00d4ff]/10 text-[#00d4ff] rounded-3xl text-sm font-semibold">NOS SERVICES</span>
-                <h2 class="text-5xl heading-font font-semibold mt-4">Des forfaits pensés pour votre voiture</h2>
-                <p class="text-xl text-gray-600 mt-3 max-w-2xl mx-auto">Choisissez le service qui correspond à vos besoins. Tous nos lavages sont réalisés avec des produits écologiques et sans eau gaspillée.</p>
+                <h2 class="heading-font text-5xl font-semibold">Nos Services</h2>
+                <p class="text-xl text-gray-600 mt-3">Des lavages soignés pour redonner tout son éclat à votre véhicule</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Service 1 -->
-                <div class="service-card bg-white rounded-3xl p-8 shadow-md border border-transparent">
-                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🧼</div>
-                    <h3 class="text-3xl font-semibold mb-2">Lavage Extérieur Premium</h3>
-                    <p class="text-gray-600 mb-6">Nettoyage complet de la carrosserie, jantes, pneus, vitres et phares. Finition à la cire liquide pour une brillance immédiate.</p>
+                <!-- 1. Lavage Extérieur -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow">
+                    <div class="text-5xl mb-6">🚘</div>
+                    <h3 class="text-3xl font-semibold mb-2">Lavage Extérieur</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">50$</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Un lavage extérieur complet et minutieux pour une brillance immédiate. 
+                        Nous utilisons du savon écologique, rinçage abondant, nettoyage approfondi des jantes, tour des portes et séchage à la main pour éviter les traces d’eau.
+                    </p>
                     <ul class="space-y-3 text-sm mb-8">
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Prélavage sans contact</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Shampoing écologique</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Cire protectrice</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Séchage à la microfibre</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Rinçage préalable</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Lavage au savon écologique</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Nettoyage des jantes</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Nettoyage autour des portes</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Séchage à la main</li>
                     </ul>
-                    <div class="flex items-baseline justify-between">
-                        <div>
-                            <span class="text-5xl font-bold">79$</span>
-                            <span class="text-gray-500">/voiture</span>
-                        </div>
-                        <button onclick="simulerReservation()" class="bg-gray-900 text-white px-8 py-4 rounded-2xl text-sm font-medium">Choisir ce service</button>
-                    </div>
+                    <a href="pagerendezvous.html?service=Lavage%20Ext%C3%A9rieur" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-card bg-white rounded-3xl p-8 shadow-md border border-transparent relative">
-                    <div class="absolute -top-3 -right-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-bold px-4 py-1 rounded-3xl flex items-center gap-x-1">
-                        <i class="fa-solid fa-fire"></i> LE PLUS POPULAIRE
-                    </div>
-                    <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🧼🪑</div>
-                    <h3 class="text-3xl font-semibold mb-2">Forfait Complet Intérieur + Extérieur</h3>
-                    <p class="text-gray-600 mb-6">Le grand nettoyage : extérieur premium + intérieur detailing complet (sièges, tapis, tableau de bord, vitres intérieures).</p>
-                    <ul class="space-y-3 text-sm mb-8">
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Tout l’extérieur</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Aspiration profonde</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Nettoyage cuir / tissu</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Désodorisant premium</li>
-                    </ul>
-                    <div class="flex items-baseline justify-between">
-                        <div>
-                            <span class="text-5xl font-bold">149$</span>
-                            <span class="text-gray-500">/voiture</span>
-                        </div>
-                        <button onclick="simulerReservation()" class="bg-[#00d4ff] hover:bg-[#00b8e0] text-white px-8 py-4 rounded-2xl text-sm font-medium">Choisir ce service</button>
-                    </div>
+                <!-- 2. Lavage Extérieur Super -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow">
+                    <div class="text-5xl mb-6">🌟</div>
+                    <h3 class="text-3xl font-semibold mb-2">Lavage Extérieur Super</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">60$</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Version améliorée de notre lavage extérieur avec une attention particulière aux détails : 
+                        polissage des chromes, nettoyage des bas de caisse et application d’un produit protecteur pour une brillance longue durée.
+                    </p>
+                    <a href="pagerendezvous.html?service=Lavage%20Ext%C3%A9rieur%20Super" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="service-card bg-white rounded-3xl p-8 shadow-md border border-transparent">
-                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-4xl mb-6">✨</div>
-                    <h3 class="text-3xl font-semibold mb-2">Détailing Luxe + Protection Céramique</h3>
-                    <p class="text-gray-600 mb-6">Le service VIP : polissage, cire céramique 6 mois, nettoyage moteur et intérieur 5 étoiles.</p>
-                    <ul class="space-y-3 text-sm mb-8">
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Polissage à la machine</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Application céramique</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Nettoyage moteur</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Protection 6 mois</li>
-                    </ul>
-                    <div class="flex items-baseline justify-between">
-                        <div>
-                            <span class="text-5xl font-bold">299$</span>
-                            <span class="text-gray-500">/voiture</span>
-                        </div>
-                        <button onclick="simulerReservation()" class="bg-gray-900 text-white px-8 py-4 rounded-2xl text-sm font-medium">Choisir ce service</button>
-                    </div>
+                <!-- 3. Lavage Intérieur Régulier -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow">
+                    <div class="text-5xl mb-6">🧼</div>
+                    <h3 class="text-3xl font-semibold mb-2">Lavage Intérieur Régulier</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">75$</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nettoyage complet de l’habitacle : aspiration profonde, nettoyage des surfaces, tableau de bord, consoles, vitres intérieures et désodorisation légère.
+                    </p>
+                    <a href="pagerendezvous.html?service=Lavage%20Int%C3%A9rieur%20R%C3%A9gulier" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
                 </div>
 
-                <!-- Service 4 -->
-                <div class="service-card bg-white rounded-3xl p-8 shadow-md border border-transparent">
-                    <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🪥</div>
-                    <h3 class="text-3xl font-semibold mb-2">Nettoyage Intérieur Express</h3>
-                    <p class="text-gray-600 mb-6">Aspiration, nettoyage des sièges, tableau de bord, vitres intérieures et désodorisation.</p>
-                    <ul class="space-y-3 text-sm mb-8">
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> 45 minutes seulement</li>
-                        <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-emerald-500"></i> Idéal entre deux lavages complets</li>
-                    </ul>
-                    <div class="flex items-baseline justify-between">
-                        <div>
-                            <span class="text-5xl font-bold">69$</span>
-                            <span class="text-gray-500">/voiture</span>
-                        </div>
-                        <button onclick="simulerReservation()" class="bg-gray-900 text-white px-8 py-4 rounded-2xl text-sm font-medium">Choisir ce service</button>
-                    </div>
+                <!-- 4. Lavage Intérieur Super -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow">
+                    <div class="text-5xl mb-6">✨</div>
+                    <h3 class="text-3xl font-semibold mb-2">Lavage Intérieur Super</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">125$</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Le detailing intérieur haut de gamme : aspiration en profondeur, shampoing des tapis et sièges en tissu, nettoyage du cuir, traitement anti-bactérien et désodorisation premium.
+                    </p>
+                    <a href="pagerendezvous.html?service=Lavage%20Int%C3%A9rieur%20Super" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
                 </div>
 
-                <!-- Service 5 -->
-                <div class="service-card bg-white rounded-3xl p-8 shadow-md border border-transparent">
-                    <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🔧</div>
-                    <h3 class="text-3xl font-semibold mb-2">Lavage Flotte &amp; Entreprises</h3>
-                    <p class="text-gray-600 mb-6">Tarifs spéciaux pour concessionnaires, entreprises de livraison et flottes de véhicules.</p>
-                    <p class="text-emerald-600 font-semibold mb-6">Dès 59$ par véhicule • Contrats mensuels disponibles</p>
-                    <button onclick="simulerReservation()" class="w-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white py-4 rounded-2xl font-medium">Demander un devis entreprise</button>
+                <!-- 5. Lavage Complet Régulier -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow">
+                    <div class="text-5xl mb-6">🚗🧼</div>
+                    <h3 class="text-3xl font-semibold mb-2">Lavage Complet Extérieur & Intérieur Régulier</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">150$</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Combinaison parfaite : lavage extérieur complet + lavage intérieur régulier. Idéal pour un entretien régulier.
+                    </p>
+                    <a href="pagerendezvous.html?service=Lavage%20Complet%20R%C3%A9gulier" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
                 </div>
 
-                <!-- Service 6 -->
-                <div class="service-card bg-white rounded-3xl p-8 shadow-md border border-transparent">
-                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🌍</div>
-                    <h3 class="text-3xl font-semibold mb-2">Lavage Éco Waterless</h3>
-                    <p class="text-gray-600 mb-6">Technologie sans eau : 100% écologique, idéal pour les condos et zones restreintes.</p>
-                    <div class="flex items-baseline justify-between">
-                        <div>
-                            <span class="text-5xl font-bold">59$</span>
-                            <span class="text-gray-500">/voiture</span>
-                        </div>
-                        <button onclick="simulerReservation()" class="bg-gray-900 text-white px-8 py-4 rounded-2xl text-sm font-medium">Choisir ce service</button>
-                    </div>
+                <!-- 6. Lavage Complet Super -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow">
+                    <div class="text-5xl mb-6">🚗🌟</div>
+                    <h3 class="text-3xl font-semibold mb-2">Lavage Complet Extérieur & Intérieur Super</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">200$</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Le service premium : lavage extérieur super + lavage intérieur super. Votre voiture retrouve un éclat exceptionnel.
+                    </p>
+                    <a href="pagerendezvous.html?service=Lavage%20Complet%20Super" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
+                </div>
+
+                <!-- 7. Shampoing des sièges -->
+                <div class="service-card bg-white border border-gray-100 rounded-3xl p-8 shadow col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="text-5xl mb-6">🪑</div>
+                    <h3 class="text-3xl font-semibold mb-2">Shampoing des Sièges</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">50$</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nettoyage en profondeur des sièges en tissu avec shampoing spécialisé pour éliminer les taches et les odeurs.
+                    </p>
+                    <a href="pagerendezvous.html?service=Shampoing%20des%20Si%C3%A8ges" 
+                       class="block text-center bg-gray-900 text-white py-4 rounded-2xl font-medium hover:bg-black">
+                        Choisir ce service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORFAITS -->
+    <section id="forfaits" class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-5xl font-semibold">Nos Forfaits Multi-Voitures</h2>
+                <p class="text-xl text-gray-400 mt-3">Idéal pour les familles ou les entreprises</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">2 voitures (Ext + Int Régulier)</h3>
+                    <p class="text-5xl font-bold mt-4">150$</p>
+                    <a href="pagerendezvous.html?service=Forfait%202%20voitures%20Complet%20R%C3%A9gulier" class="mt-8 block text-center bg-white text-gray-900 py-4 rounded-2xl font-medium">Choisir ce forfait</a>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">3 voitures (Ext + Int Régulier)</h3>
+                    <p class="text-5xl font-bold mt-4">200$</p>
+                    <a href="pagerendezvous.html?service=Forfait%203%20voitures%20Complet%20R%C3%A9gulier" class="mt-8 block text-center bg-white text-gray-900 py-4 rounded-2xl font-medium">Choisir ce forfait</a>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">4 voitures (Ext + Int Régulier)</h3>
+                    <p class="text-5xl font-bold mt-4">250$</p>
+                    <a href="pagerendezvous.html?service=Forfait%204%20voitures%20Complet%20R%C3%A9gulier" class="mt-8 block text-center bg-white text-gray-900 py-4 rounded-2xl font-medium">Choisir ce forfait</a>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">5 voitures (Ext + Int Régulier)</h3>
+                    <p class="text-5xl font-bold mt-4">300$</p>
+                    <a href="pagerendezvous.html?service=Forfait%205%20voitures%20Complet%20R%C3%A9gulier" class="mt-8 block text-center bg-white text-gray-900 py-4 rounded-2xl font-medium">Choisir ce forfait</a>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">Lavage Extérieur 2 à 4 voitures</h3>
+                    <p class="text-5xl font-bold mt-4">40$ <span class="text-base font-normal">par voiture</span></p>
+                    <a href="pagerendezvous.html?service=Forfait%20Ext%C3%A9rieur%202-4%20voitures" class="mt-8 block text-center bg-white text-gray-900 py-4 rounded-2xl font-medium">Choisir ce forfait</a>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">Lavage Extérieur 5 à 10 voitures</h3>
+                    <p class="text-5xl font-bold mt-4">35$ <span class="text-base font-normal">par voiture</span></p>
+                    <a href="pagerendezvous.html?service=Forfait%20Ext%C3%A9rieur%205-10%20voitures" class="mt-8 block text-center bg-white text-gray-900 py-4 rounded-2xl font-medium">Choisir ce forfait</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- COMMENT ÇA MARCHE -->
-    <section id="comment-ca-marche" class="py-20 bg-white">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="grid lg:grid-cols-12 gap-16 items-center">
-                <div class="lg:col-span-5">
-                    <span class="text-[#00d4ff] font-semibold">EN 4 ÉTAPES SIMPLES</span>
-                    <h2 class="text-5xl heading-font font-semibold mt-3">Comment se passe un lavage PrimeLave ?</h2>
-                    <p class="text-xl text-gray-600 mt-6">Nous venons chez vous avec tout le matériel professionnel. Pas besoin de vous déplacer.</p>
+    <section id="comment-ca-marche" class="py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold mb-12">Comment ça marche ?</h2>
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="text-6xl mb-4">1️⃣</div>
+                    <h4 class="font-semibold text-xl">Vous réservez</h4>
+                    <p class="text-gray-600 mt-3">En ligne ou par téléphone</p>
                 </div>
-                
-                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 rounded-3xl bg-[#00d4ff]/10 flex items-center justify-center text-5xl mb-6">1️⃣</div>
-                        <h4 class="font-semibold text-2xl">Vous réservez</h4>
-                        <p class="text-gray-600 mt-3">En 30 secondes sur notre site ou par téléphone</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 rounded-3xl bg-[#00d4ff]/10 flex items-center justify-center text-5xl mb-6">2️⃣</div>
-                        <h4 class="font-semibold text-2xl">Nous arrivons</h4>
-                        <p class="text-gray-600 mt-3">Notre technicien certifié arrive à l’heure convenue avec le camion équipé</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 rounded-3xl bg-[#00d4ff]/10 flex items-center justify-center text-5xl mb-6">3️⃣</div>
-                        <h4 class="font-semibold text-2xl">Nous lavons</h4>
-                        <p class="text-gray-600 mt-3">Pendant que vous restez chez vous ou au travail</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="mx-auto w-20 h-20 rounded-3xl bg-[#00d4ff]/10 flex items-center justify-center text-5xl mb-6">4️⃣</div>
-                        <h4 class="font-semibold text-2xl">Vous profitez</h4>
-                        <p class="text-gray-600 mt-3">Votre voiture est comme neuve. Paiement sur place ou en ligne.</p>
-                    </div>
+                <div>
+                    <div class="text-6xl mb-4">2️⃣</div>
+                    <h4 class="font-semibold text-xl">Nous confirmons</h4>
+                    <p class="text-gray-600 mt-3">Date et heure selon votre disponibilité</p>
+                </div>
+                <div>
+                    <div class="text-6xl mb-4">3️⃣</div>
+                    <h4 class="font-semibold text-xl">Nous venons chez vous</h4>
+                    <p class="text-gray-600 mt-3">À Sherbrooke et environs</p>
+                </div>
+                <div>
+                    <div class="text-6xl mb-4">4️⃣</div>
+                    <h4 class="font-semibold text-xl">Votre voiture brille</h4>
+                    <p class="text-gray-600 mt-3">Paiement sur place</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- TARIFS RAPIDES -->
-    <section id="tarifs" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="text-center text-5xl heading-font font-semibold mb-12">Tarifs transparents • Aucun frais caché</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8">
-                    <p class="text-[#00d4ff] font-medium">Voiture compacte</p>
-                    <p class="text-6xl font-bold my-4">79$</p>
-                    <p class="text-sm opacity-75">Lavage Extérieur Premium</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8">
-                    <p class="text-[#00d4ff] font-medium">VUS / Berline</p>
-                    <p class="text-6xl font-bold my-4">89$</p>
-                    <p class="text-sm opacity-75">Lavage Extérieur Premium</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 relative">
-                    <div class="absolute top-6 right-6 bg-emerald-400 text-white text-xs px-3 py-1 rounded-2xl">Recommandé</div>
-                    <p class="text-[#00d4ff] font-medium">Tous véhicules</p>
-                    <p class="text-6xl font-bold my-4">149$</p>
-                    <p class="text-sm opacity-75">Forfait Complet</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8">
-                    <p class="text-[#00d4ff] font-medium">Camionnette / Gros VUS</p>
-                    <p class="text-6xl font-bold my-4">169$</p>
-                    <p class="text-sm opacity-75">Forfait Complet</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TÉMOIGNAGES -->
-    <section id="temoignages" class="py-24 bg-white">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl heading-font font-semibold">Ils ont aimé leur lavage à domicile</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <div class="flex gap-x-1 text-amber-400 mb-6">★★★★★</div>
-                    <p class="text-lg">“Le technicien est arrivé pile à l’heure. Ma Tesla est impeccable et je n’ai même pas bougé de chez moi ! Meilleur service de lavage à Montréal.”</p>
-                    <div class="mt-8 flex items-center gap-x-3">
-                        <div class="w-10 h-10 bg-gray-300 rounded-2xl"></div>
-                        <div>
-                            <p class="font-semibold">Sophie Gagnon</p>
-                            <p class="text-sm text-gray-500">Ahuntsic • 12 mars 2026</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <div class="flex gap-x-1 text-amber-400 mb-6">★★★★☆</div>
-                    <p class="text-lg">“Service ultra professionnel. Le detailing intérieur est parfait. Je recommande à 100% pour les gens pressés.”</p>
-                    <div class="mt-8 flex items-center gap-x-3">
-                        <div class="w-10 h-10 bg-gray-300 rounded-2xl"></div>
-                        <div>
-                            <p class="font-semibold">Jean-François Côté</p>
-                            <p class="text-sm text-gray-500">Laval • 10 mars 2026</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <div class="flex gap-x-1 text-amber-400 mb-6">★★★★★</div>
-                    <p class="text-lg">“J’ai pris le forfait céramique. Ma voiture brille encore 3 semaines après ! Équipe très courtoise et respectueuse.”</p>
-                    <div class="mt-8 flex items-center gap-x-3">
-                        <div class="w-10 h-10 bg-gray-300 rounded-2xl"></div>
-                        <div>
-                            <p class="font-semibold">Marie-Ève Leclerc</p>
-                            <p class="text-sm text-gray-500">Brossard • 8 mars 2026</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA FINAL + CONTACT -->
-    <section id="contact" class="py-24 bg-gradient-to-br from-[#00d4ff] to-[#0099cc] text-white">
-        <div class="max-w-screen-2xl mx-auto px-8 text-center">
-            <h2 class="text-6xl heading-font font-semibold max-w-2xl mx-auto">Prêt à retrouver une voiture comme neuve sans sortir de chez vous ?</h2>
-            <p class="text-2xl mt-6 opacity-90">Réservez votre lavage en moins de 60 secondes</p>
-            
-            <div class="mt-12 max-w-md mx-auto bg-white text-gray-900 rounded-3xl p-2 shadow-2xl">
-                <div class="bg-gray-50 rounded-3xl px-8 py-8">
-                    <input type="text" placeholder="Votre adresse (ex: 123 rue Sainte-Catherine)" 
-                           class="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5 text-lg placeholder-gray-400 focus:outline-none mb-6">
-                    
-                    <div class="grid grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm mb-2 font-medium">Date souhaitée</label>
-                            <input type="date" value="2026-03-30" class="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5">
-                        </div>
-                        <div>
-                            <label class="block text-sm mb-2 font-medium">Heure</label>
-                            <select class="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5">
-                                <option>9h00</option>
-                                <option>10h30</option>
-                                <option selected>13h00</option>
-                                <option>15h30</option>
-                                <option>17h00</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <button onclick="simulerReservation()" 
-                            class="mt-8 w-full bg-gray-900 text-white h-16 rounded-2xl text-2xl font-semibold flex items-center justify-center gap-x-4">
-                        Confirmer ma réservation
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <p class="text-xs text-gray-500 mt-6">✅ Confirmation immédiate par SMS et courriel</p>
-                </div>
-            </div>
-            
-            <p class="mt-10 text-white/70">Ou appelez-nous directement au <a href="tel:514-555-0123" class="font-bold underline">514-555-0123</a></p>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white/70 py-16">
-        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-y-10">
-            <div class="md:col-span-5">
-                <div class="flex items-center gap-x-3 text-white mb-6">
-                    <div class="w-9 h-9 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-3xl">🚗</div>
-                    <h1 class="heading-font text-4xl font-semibold">PrimeLave</h1>
-                </div>
-                <p class="max-w-xs">Lavage auto professionnel à domicile à Montréal et ses environs depuis 2023.</p>
-                <div class="flex gap-x-6 mt-8 text-2xl">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-tiktok"></i>
-                </div>
-            </div>
-            
-            <div class="md:col-span-2">
-                <p class="font-semibold mb-4 text-white">Services</p>
-                <ul class="space-y-2 text-sm">
-                    <li>Lavage Extérieur</li>
-                    <li>Forfait Complet</li>
-                    <li>Détailing Luxe</li>
-                    <li>Waterless Éco</li>
-                </ul>
-            </div>
-            
-            <div class="md:col-span-2">
-                <p class="font-semibold mb-4 text-white">Entreprise</p>
-                <ul class="space-y-2 text-sm">
-                    <li>À propos de nous</li>
-                    <li>Carrières</li>
-                    <li>Blog</li>
-                    <li>Devenir partenaire</li>
-                </ul>
-            </div>
-            
-            <div class="md:col-span-3">
-                <p class="font-semibold mb-4 text-white">Nous sommes à Montréal</p>
-                <p class="text-sm">Service rapide dans tout le Grand Montréal, Laval, Longueuil, Brossard, Repentigny et Terrebonne.</p>
-                <p class="mt-8 text-xs">© 2026 PrimeLave inc. Tous droits réservés.</p>
-            </div>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-2xl font-semibold">ShineAutomobile</p>
+            <p class="mt-2">Lavage auto à domicile • Estrie</p>
+            <p class="mt-8">📍 Sherbrooke, Magog, Bromptonville, Windsor, Waterville, Saint-Denis-de-Brompton</p>
+            <p class="mt-4">
+                <a href="tel:8736623813" class="text-[#00e0ff] text-xl font-medium">873-662-3813</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-12">© 2026 ShineAutomobile. Tous droits réservés.</p>
         </div>
     </footer>
 
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu')
-            const icon = document.getElementById('mobile-icon')
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden')
-                icon.classList.replace('fa-bars', 'fa-xmark')
-            } else {
-                menu.classList.add('hidden')
-                icon.classList.replace('fa-xmark', 'fa-bars')
-            }
-        }
-        
-        // Tailwind script configuration
-        function initializeTailwind() {
-            return {
-                config(userConfig = {}) {
-                    return {
-                        content: [],
-                        theme: {
-                            extend: {}
-                        },
-                        plugins: []
-                    }
-                },
-                theme(userConfig = {}) {
-                    return {
-                        ...this.defaultTheme(),
-                        ...userConfig
-                    }
-                },
-                defaultTheme() {
-                    return {
-                        extend: {
-                            colors: {
-                                primary: '#00d4ff'
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        // Simulation de réservation (pour démo)
-        function simulerReservation() {
-            const notif = document.createElement('div')
-            notif.style.cssText = 'position:fixed; bottom:30px; right:30px; background:#00d4ff; color:white; padding:20px 30px; border-radius:9999px; box-shadow:0 20px 25px -5px rgb(0 212 255); z-index:9999; display:flex; align-items:center; gap:12px;'
-            notif.innerHTML = `
-                <i class="fa-solid fa-circle-check text-3xl"></i>
-                <div>
-                    <p class="font-semibold text-lg">Réservation confirmée !</p>
-                    <p class="text-sm opacity-90">Un technicien vous contactera dans les 5 prochaines minutes.</p>
-                </div>
-            `
-            document.body.appendChild(notif)
-            
-            setTimeout(() => {
-                notif.style.transitionDuration = '400ms'
-                notif.style.opacity = '0'
-                setTimeout(() => notif.remove(), 400)
-            }, 4200)
-            
-            // Scroll vers le haut pour simuler le retour
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-        
-        // Initialisation
-        window.onload = () => {
-            initializeTailwind().config()
-            console.log('%c✅ Site PrimeLave prêt ! Code complet pour votre entreprise de lavage auto à domicile.', 'background:#00d4ff; color:white; padding:4px 8px; border-radius:4px;')
-        }
+        // Script simple pour passer le service sélectionné (déjà fait via les liens)
+        console.log('%c✅ Site ShineAutomobile mis à jour avec succès !', 'color:#00e0ff; font-size:16px');
     </script>
 </body>
 </html>
