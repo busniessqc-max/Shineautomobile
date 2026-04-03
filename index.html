@@ -97,72 +97,52 @@
     </header>
 
     <!-- SERVICES PRINCIPAUX -->
-    <section id="services" class="py-20 bg-white">
+    <section id="categories" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-5">
             <div class="text-center mb-12">
-                <h2 class="heading-font text-4xl font-semibold">Nos Services de Lavage</h2>
+                <h2 class="heading-font text-4xl font-semibold">Choisissez le type de votre véhicule</h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Pour prendre rendez-vous, veuillez sélectionner le type de votre véhicule ci-dessous.<br>
+                    Chaque catégorie contient les services et prix adaptés à votre véhicule.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service 1 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🚘</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Extérieur</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">50$</p>
-                    <p class="text-gray-600 text-sm mb-6">Rinçage, savon écologique, nettoyage des jantes, tour des portes et séchage à la main.</p>
-                    <a href="pageservice.html?service=Lavage Extérieur" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <a href="sedan.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                    <div class="h-56 bg-gray-100 flex items-center justify-center text-8xl">🚗</div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">Sedan / Petite voiture</h3>
+                        <p class="text-gray-600">Berlines et voitures compactes</p>
+                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
 
-                <!-- Service 2 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🌟</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Extérieur Super</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">60$</p>
-                    <p class="text-gray-600 text-sm mb-6">Version améliorée avec polissage et protection longue durée.</p>
-                    <a href="pageservice.html?service=Lavage Extérieur Super" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
+                <a href="suv.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                    <div class="h-56 bg-gray-100 flex items-center justify-center text-8xl">🚙</div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">SUV</h3>
+                        <p class="text-gray-600">VUS et crossovers</p>
+                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
 
-                <!-- Service 3 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🧼</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Intérieur Régulier</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">75$</p>
-                    <p class="text-gray-600 text-sm mb-6">Aspiration et nettoyage complet de l’habitacle.</p>
-                    <a href="pageservice.html?service=Lavage Intérieur Régulier" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
+                <a href="van.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                    <div class="h-56 bg-gray-100 flex items-center justify-center text-8xl">🚐</div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">Van / Minivan</h3>
+                        <p class="text-gray-600">Fourgonnettes et vans</p>
+                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
 
-                <!-- Service 4 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">✨</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Intérieur Super</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">125$</p>
-                    <p class="text-gray-600 text-sm mb-6">Shampoing sièges, cuir et désodorisation premium.</p>
-                    <a href="pageservice.html?service=Lavage Intérieur Super" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🚗🧼</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Complet Régulier</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">150$</p>
-                    <p class="text-gray-600 text-sm mb-6">Extérieur + Intérieur régulier.</p>
-                    <a href="pageservice.html?service=Lavage Complet Régulier" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card bg-white border border-gray-100 rounded-3xl p-6 shadow">
-                    <div class="text-5xl mb-4">🚗🌟</div>
-                    <h3 class="text-2xl font-semibold mb-2">Lavage Complet Super</h3>
-                    <p class="text-3xl font-bold text-[#00e0ff] mb-4">200$</p>
-                    <p class="text-gray-600 text-sm mb-6">Extérieur Super + Intérieur Super.</p>
-                    <a href="pageservice.html?service=Lavage Complet Super" target="_blank" 
-                       class="block text-center bg-gray-900 text-white py-3.5 rounded-2xl text-sm font-medium">Choisir</a>
-                </div>
+                <a href="pickup.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                    <div class="h-56 bg-gray-100 flex items-center justify-center text-8xl">🛻</div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">Pickup / Camionnette</h3>
+                        <p class="text-gray-600">Pickups et camions légers</p>
+                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
