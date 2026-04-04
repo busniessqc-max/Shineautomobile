@@ -15,23 +15,15 @@
 
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+                        url('Images/background.jpeg') center/cover no-repeat fixed;
         }
 
-        .service-card:hover {
+        .category-card {
+            transition: all 0.3s ease;
+        }
+        .category-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgb(0 224 255 / 0.25);
-        }
-
-        /* Améliorations pour mobile */
-        @media (max-width: 640px) {
-            .heading-font {
-                font-size: 2.5rem;
-                line-height: 1.1;
-            }
-            .hero-bg {
-                height: 85vh;
-            }
+            box-shadow: 0 20px 40px -10px rgb(0 224 255 / 0.3);
         }
     </style>
 </head>
@@ -49,7 +41,7 @@
             </div>
             
             <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-                <a href="#services" class="hover:text-[#00e0ff]">Services</a>
+                <a href="#categories" class="hover:text-[#00e0ff]">Services</a>
                 <a href="#autres-services" class="hover:text-[#00e0ff]">Autres services</a>
                 <a href="#forfaits" class="hover:text-[#00e0ff]">Forfaits</a>
                 <a href="#apropos" class="hover:text-[#00e0ff]">À propos</a>
@@ -75,16 +67,17 @@
         <div class="max-w-7xl mx-auto px-5 text-center md:text-left">
             <div class="max-w-xl mx-auto md:mx-0">
                 <span class="inline-block px-5 py-2 bg-white/20 backdrop-blur-md rounded-3xl text-sm font-medium mb-6">
-                Service à Sherbrooke et environs
-            </span>
+                    Service à Sherbrooke et environs
+                </span>
                 <h1 class="heading-font text-5xl md:text-6xl font-semibold leading-tight">
                     Votre voiture brille,<br>à votre porte.
                 </h1>
                 <p class="mt-6 text-lg md:text-xl text-white/90">
-                    Lavage professionnel et écologique directement chez vous.
+                    Lavage professionnel, écologique et minutieux directement chez vous.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#services" class="bg-white text-gray-900 px-8 py-4 rounded-3xl font-semibold text-lg hover:bg-[#00e0ff] hover:text-white">
+                    <a href="#categories" 
+                       class="bg-white text-gray-900 px-8 py-4 rounded-3xl font-semibold text-lg hover:bg-[#00e0ff] hover:text-white">
                         Voir les services
                     </a>
                     <a href="pageservice.html" target="_blank" 
