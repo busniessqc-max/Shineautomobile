@@ -20,8 +20,8 @@
 
         .section {
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-out;
+            transform: translateY(60px);
+            transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
         .section.visible {
             opacity: 1;
@@ -32,7 +32,7 @@
             transition: all 0.4s ease;
         }
         .category-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
             box-shadow: 0 25px 50px -12px rgb(0 224 255 / 0.3);
         }
     </style>
@@ -89,7 +89,7 @@
     </header>
 
     <!-- CATÉGORIES DE VÉHICULES -->
-    <section id="categories" class="section py-20 bg-white">
+    <section id="categories" class="section py-24 bg-[#f0f9ff]">
         <div class="max-w-7xl mx-auto px-5">
             <div class="text-center mb-16">
                 <h2 class="heading-font text-4xl font-semibold">Choisissez le type de votre véhicule</h2>
@@ -99,40 +99,40 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <a href="sedan.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <a href="sedan.html" class="category-card group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl block">
                     <img src="Images/sedan.jpeg" alt="Sedan" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-3xl font-semibold mb-2">Sedan / Petite voiture</h3>
                         <p class="text-gray-600">Berlines et voitures compactes</p>
-                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="mt-8 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                 </a>
 
-                <a href="suv.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                <a href="suv.html" class="category-card group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl block">
                     <img src="Images/suv.jpeg" alt="SUV" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-3xl font-semibold mb-2">SUV</h3>
                         <p class="text-gray-600">VUS et crossovers</p>
-                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="mt-8 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                 </a>
 
-                <a href="van.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                <a href="van.html" class="category-card group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl block">
                     <img src="Images/van.jpeg" alt="Van" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-3xl font-semibold mb-2">Van / Minivan</h3>
                         <p class="text-gray-600">Fourgonnettes et vans</p>
-                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="mt-8 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                 </a>
 
-                <a href="pickup.html" class="category-card bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl block">
+                <a href="pickup.html" class="category-card group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl block">
                     <img src="Images/pickup.jpeg" alt="Pickup" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-3xl font-semibold mb-2">Pickup / Camionnette</h3>
                         <p class="text-gray-600">Pickups et camions légers</p>
-                        <div class="mt-6 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="mt-8 text-[#00e0ff] font-medium flex items-center gap-2">Voir les services <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
                 </a>
             </div>
@@ -141,10 +141,31 @@
 
     <!-- AUTRES SERVICES -->
     <section id="autres-services" class="section py-20 bg-gray-100">
-        <!-- Ton code des services d'urgence (déverrouillage + survoltage) reste ici -->
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl font-semibold">Autres Services d’Urgence</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-3xl p-8 shadow">
+                    <div class="text-6xl mb-6">🔑</div>
+                    <h3 class="text-3xl font-semibold mb-2">Déverrouillage Auto</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">50$</p>
+                    <p class="text-gray-700 mb-8">Clés oubliées à l’intérieur ? Intervention rapide et sécuritaire.</p>
+                    <a href="tel:8736623813" class="block w-full text-center bg-[#00e0ff] text-white py-4 rounded-2xl font-medium">📞 Appeler maintenant</a>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow">
+                    <div class="text-6xl mb-6">🔋</div>
+                    <h3 class="text-3xl font-semibold mb-2">Survoltage / Boost Batterie</h3>
+                    <p class="text-4xl font-bold text-[#00e0ff] mb-6">40$</p>
+                    <p class="text-gray-700 mb-8">Batterie à plat ? Nous rechargeons sur place rapidement.</p>
+                    <a href="tel:8736623813" class="block w-full text-center bg-[#00e0ff] text-white py-4 rounded-2xl font-medium">📞 Appeler maintenant</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- FORFAITS MULTI-VOITURES (Complet comme demandé) -->
+    <!-- FORFAITS MULTI-VOITURES -->
     <section id="forfaits" class="section py-20 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-5">
             <div class="text-center mb-16">
@@ -153,63 +174,49 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-
-                <!-- Forfait Lavage Extérieur -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10">
-                    <div class="text-center mb-10">
-                        <h3 class="text-3xl font-semibold">Forfait Lavage Extérieur</h3>
-                        <p class="text-[#00e0ff] text-sm mt-2">Nettoyage complet de l’extérieur</p>
-                    </div>
+                    <h3 class="text-3xl font-semibold text-center mb-10">Forfait Lavage Extérieur</h3>
                     <div class="space-y-6">
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6">
                             <div>
                                 <p class="font-medium">2 à 4 voitures</p>
-                                <p class="text-3xl font-bold text-[#00e0ff]">40$ <span class="text-base font-normal">/voiture</span></p>
+                                <p class="text-3xl font-bold text-[#00e0ff]">40$ <span class="text-base">/voiture</span></p>
                             </div>
-                            <a href="pageservice.html?service=Forfait Extérieur 2-4 voitures" target="_blank" 
-                               class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
+                            <a href="pageservice.html?service=Forfait Extérieur 2-4 voitures" target="_blank" class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
                         </div>
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6">
                             <div>
                                 <p class="font-medium">5 à 10 voitures</p>
-                                <p class="text-3xl font-bold text-[#00e0ff]">30$ <span class="text-base font-normal">/voiture</span></p>
+                                <p class="text-3xl font-bold text-[#00e0ff]">30$ <span class="text-base">/voiture</span></p>
                             </div>
-                            <a href="pageservice.html?service=Forfait Extérieur 5-10 voitures" target="_blank" 
-                               class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
+                            <a href="pageservice.html?service=Forfait Extérieur 5-10 voitures" target="_blank" class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Forfait Lavage Complet -->
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10">
-                    <div class="text-center mb-10">
-                        <h3 class="text-3xl font-semibold">Forfait Lavage Complet</h3>
-                        <p class="text-[#00e0ff] text-sm mt-2">Extérieur + Intérieur Régulier</p>
-                    </div>
+                    <h3 class="text-3xl font-semibold text-center mb-10">Forfait Lavage Complet</h3>
                     <div class="space-y-6">
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6">
                             <div>
                                 <p class="font-medium">2 voitures</p>
-                                <p class="text-3xl font-bold text-[#00e0ff]">75$ <span class="text-base font-normal">/voiture</span></p>
+                                <p class="text-3xl font-bold text-[#00e0ff]">75$ <span class="text-base">/voiture</span></p>
                             </div>
-                            <a href="pageservice.html?service=Forfait Complet 2 voitures" target="_blank" 
-                               class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
+                            <a href="pageservice.html?service=Forfait Complet 2 voitures" target="_blank" class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
                         </div>
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6">
                             <div>
                                 <p class="font-medium">3 à 4 voitures</p>
-                                <p class="text-3xl font-bold text-[#00e0ff]">70$ <span class="text-base font-normal">/voiture</span></p>
+                                <p class="text-3xl font-bold text-[#00e0ff]">70$ <span class="text-base">/voiture</span></p>
                             </div>
-                            <a href="pageservice.html?service=Forfait Complet 3-4 voitures" target="_blank" 
-                               class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
+                            <a href="pageservice.html?service=Forfait Complet 3-4 voitures" target="_blank" class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
                         </div>
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6">
                             <div>
                                 <p class="font-medium">5 voitures et plus</p>
-                                <p class="text-3xl font-bold text-[#00e0ff]">60$ <span class="text-base font-normal">/voiture</span></p>
+                                <p class="text-3xl font-bold text-[#00e0ff]">60$ <span class="text-base">/voiture</span></p>
                             </div>
-                            <a href="pageservice.html?service=Forfait Complet 5+ voitures" target="_blank" 
-                               class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
+                            <a href="pageservice.html?service=Forfait Complet 5+ voitures" target="_blank" class="bg-white text-gray-900 px-8 py-3 rounded-2xl font-semibold hover:bg-gray-100">Sélectionner</a>
                         </div>
                     </div>
                 </div>
@@ -259,12 +266,14 @@
     </footer>
 
     <script>
-        // Animation au scroll
+        // Animations au scroll
         const sections = document.querySelectorAll('.section');
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 150);
                 }
             });
         }, { threshold: 0.15 });
