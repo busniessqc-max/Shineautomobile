@@ -28,12 +28,11 @@
             background-repeat: no-repeat;
         }
 
-        /* Transitions générales entre sections */
+        /* Transitions générales */
         section {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Animation d'apparition au scroll */
         .fade-in {
             opacity: 0;
             transform: translateY(40px);
@@ -43,14 +42,6 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Animation pour les cartes */
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .category-card {
@@ -65,6 +56,11 @@
             transform: translateY(-12px);
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
         }
+
+        /* Menu mobile */
+        #mobile-menu {
+            transition: all 0.4s ease;
+        }
     </style>
 </head>
 
@@ -74,6 +70,7 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
 
+            <!-- Logo -->
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-[#00e0ff] rounded-2xl flex items-center justify-center text-3xl">✨</div>
                 <div>
@@ -82,10 +79,38 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-3">
+            <!-- Liens Desktop -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#categories" class="hover:text-[#00e0ff] transition-colors">Services</a>
+                <a href="#forfaits" class="hover:text-[#00e0ff] transition-colors">Forfaits</a>
+                <a href="#apropos" class="hover:text-[#00e0ff] transition-colors">À propos</a>
+                <a href="#contact" class="hover:text-[#00e0ff] transition-colors">Contact</a>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="flex items-center gap-4">
                 <a href="tel:8736623813" class="text-sm font-medium flex items-center gap-1.5 hover:text-[#00e0ff] transition-colors">
                     <i class="fa-solid fa-phone"></i>
                     <span class="hidden sm:inline">873-662-3813</span>
+                </a>
+
+                <!-- Bouton Hamburger -->
+                <button id="menu-btn" class="md:hidden text-2xl text-gray-700 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-5 py-6 flex flex-col gap-6 text-lg font-medium">
+                <a href="#categories" class="hover:text-[#00e0ff] transition-colors">Services</a>
+                <a href="#forfaits" class="hover:text-[#00e0ff] transition-colors">Forfaits</a>
+                <a href="#apropos" class="hover:text-[#00e0ff] transition-colors">À propos</a>
+                <a href="#contact" class="hover:text-[#00e0ff] transition-colors">Contact</a>
+                <a href="tel:8736623813" class="flex items-center gap-2 text-[#00e0ff]">
+                    <i class="fa-solid fa-phone"></i> 
+                    Appeler : 873-662-3813
                 </a>
             </div>
         </div>
@@ -123,6 +148,7 @@
             </div>
         </div>
     </header>
+
     <!-- SECTION COMMENT ÇA MARCHE -->
     <section id="comment-ca-marche" class="py-24 bg-white fade-in">
         <div class="max-w-7xl mx-auto px-6 text-center">
@@ -135,6 +161,7 @@
             </div>
         </div>
     </section>
+
     <!-- SECTION CATÉGORIES DE VÉHICULES -->
     <section id="categories" class="py-24 bg-[#f0f9ff] fade-in">
         <div class="max-w-7xl mx-auto px-5">
@@ -147,7 +174,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <!-- Sedan -->
                 <a href="sedan.html" class="category-card group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl opacity-0 translate-y-8"
                    style="animation: fadeUp 0.6s forwards 0.1s;">
                     <img src="Images/sedan.jpeg" alt="Sedan Shine Automobile" 
@@ -162,7 +188,6 @@
                     </div>
                 </a>
 
-                <!-- SUV, Van, Pickup (même logique avec délais progressifs) -->
                 <a href="suv.html" class="category-card group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl opacity-0 translate-y-8"
                    style="animation: fadeUp 0.6s forwards 0.3s;">
                     <img src="Images/vus.jpeg" alt="SUV Shine Automobile" 
@@ -226,8 +251,7 @@
                             <p class="text-gray-700 mb-8 text-[15px] leading-relaxed">
                                 Clés oubliées à l’intérieur ? Nous intervenons rapidement et en toute sécurité sans endommager votre véhicule.
                             </p>
-                            <a href="tel:8736623813" 
-                               class="block w-full text-center bg-[#00e0ff] hover:bg-[#00c8e0] text-white font-semibold py-5 rounded-2xl text-lg active:scale-95 transition-all duration-300">
+                            <a href="tel:8736623813" class="block w-full text-center bg-[#00e0ff] hover:bg-[#00c8e0] text-white font-semibold py-5 rounded-2xl text-lg active:scale-95 transition-all duration-300">
                                 📞 Appeler maintenant
                             </a>
                         </div>
@@ -243,8 +267,7 @@
                             <p class="text-gray-700 mb-8 text-[15px] leading-relaxed">
                                 Batterie à plat ? Nous venons sur place pour recharger votre batterie rapidement et en toute sécurité.
                             </p>
-                            <a href="tel:8736623813" 
-                               class="block w-full text-center bg-[#00e0ff] hover:bg-[#00c8e0] text-white font-semibold py-5 rounded-2xl text-lg active:scale-95 transition-all duration-300">
+                            <a href="tel:8736623813" class="block w-full text-center bg-[#00e0ff] hover:bg-[#00c8e0] text-white font-semibold py-5 rounded-2xl text-lg active:scale-95 transition-all duration-300">
                                 📞 Appeler maintenant
                             </a>
                         </div>
@@ -263,7 +286,6 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Forfaits ici (inchangés sauf classe service-card ajoutée) -->
                 <div class="service-card bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-10">
                     <div class="text-center mb-10">
                         <h3 class="text-3xl font-semibold">Forfait Lavage Extérieur régulier</h3>
@@ -280,7 +302,6 @@
                                 Sélectionner
                             </a>
                         </div>
-                        <!-- Autres forfaits identiques avec transition -->
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition">
                             <div>
                                 <p class="font-medium">5 à 10 voitures</p>
@@ -294,7 +315,6 @@
                     </div>
                 </div>
 
-                <!-- Deuxième forfait (identique logique) -->
                 <div class="service-card bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-10">
                     <div class="text-center mb-10">
                         <h3 class="text-3xl font-semibold">Forfait Lavage Complet</h3>
@@ -311,7 +331,6 @@
                                 Sélectionner
                             </a>
                         </div>
-                        <!-- Les autres blocs forfaits conservés identiquement -->
                         <div class="flex justify-between items-center bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition">
                             <div>
                                 <p class="font-medium">3 à 4 voitures</p>
@@ -418,12 +437,25 @@
                     entry.target.classList.add('visible');
                 }
             });
-        }, {
-            threshold: 0.1
-        });
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Menu Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = menuBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
         });
     </script>
 </body>
