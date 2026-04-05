@@ -28,7 +28,6 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous - ShineAutomobile">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="#">
 
             <!-- Nom complet -->
             <div>
@@ -43,31 +42,47 @@
                         class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
                     <option value="">-- Sélectionnez un service --</option>
                     
-                    <!-- Services standards -->
-                    <option value="Lavage Extérieur">Lavage Extérieur - 40$ à 50$</option>
-                    <option value="Lavage Extérieur Plus">Lavage Extérieur Plus - 50$ à 60$</option>
-                    <option value="Lavage Intérieur Régulier">Lavage Intérieur Régulier - 75$ à 100$</option>
-                    <option value="Lavage Intérieur Super">Lavage Intérieur Super - 125$ à 150$</option>
-                    <option value="Lavage Complet Régulier">Lavage Complet Régulier - 100$ à 150$</option>
-                    <option value="Lavage Complet Super">Lavage Complet Super - 175$ à 200$</option>
-                    <option value="Shampoing des Sièges">Shampoing des Sièges - 50$ à 75$</option>
-                    <option value="Déverrouillage Auto">Déverrouillage Auto - 50$</option>
+                    <option value="Lavage Extérieur Sedan">Lavage Extérieur Sedan - 40$</option>
+                    <option value="Lavage Extérieur Plus Sedan">Lavage Extérieur Plus Sedan - 50$</option>
+                    <option value="Lavage Intérieur Régulier Sedan">Lavage Intérieur Régulier Sedan - 75$</option>
+                    <option value="Lavage Intérieur Super Sedan">Lavage Intérieur Super Sedan - 125$</option>
+                    <option value="Lavage Complet Régulier Sedan">Lavage Complet Régulier Sedan - 100$</option>
+                    <option value="Lavage Complet Super Sedan">Lavage Complet Super Sedan - 175$</option>
+                    <option value="Shampoing des Sièges Sedan">Shampoing des Sièges Sedan - 50$</option>
 
-                    <!-- Forfaits -->
-                    <option value="Forfait Extérieur 2-4 voitures">Forfait Extérieur 2-4 voitures - 30$/voiture</option>
-                    <option value="Forfait Extérieur 5-10 voitures">Forfait Extérieur 5-10 voitures - 25$/voiture</option>
-                    <option value="Forfait Complet 2 voitures">Forfait Complet 2 voitures - 95$/voiture</option>
-                    <option value="Forfait Complet 3-4 voitures">Forfait Complet 3-4 voitures - 90$/voiture</option>
-                    <option value="Forfait Complet 5+ voitures">Forfait Complet 5+ voitures - 80$/voiture</option>
+                    <option value="Lavage Extérieur SUV">Lavage Extérieur SUV - 40$</option>
+                    <option value="Lavage Extérieur Plus SUV">Lavage Extérieur Plus SUV - 50$</option>
+                    <option value="Lavage Intérieur Régulier SUV">Lavage Intérieur Régulier SUV - 80$</option>
+                    <option value="Lavage Intérieur Super SUV">Lavage Intérieur Super SUV - 130$</option>
+                    <option value="Lavage Complet Régulier SUV">Lavage Complet Régulier SUV - 115$</option>
+                    <option value="Lavage Complet Super SUV">Lavage Complet Super SUV - 180$</option>
+                    <option value="Shampoing des Sièges SUV">Shampoing des Sièges SUV - 50$</option>
+
+                    <option value="Lavage Extérieur Van">Lavage Extérieur Van - 50$</option>
+                    <option value="Lavage Extérieur Plus Van">Lavage Extérieur Plus Van - 60$</option>
+                    <option value="Lavage Intérieur Régulier Van">Lavage Intérieur Régulier Van - 100$</option>
+                    <option value="Lavage Intérieur Super Van">Lavage Intérieur Super Van - 150$</option>
+                    <option value="Lavage Complet Régulier Van">Lavage Complet Régulier Van - 150$</option>
+                    <option value="Lavage Complet Super Van">Lavage Complet Super Van - 200$</option>
+                    <option value="Shampoing des Sièges Van">Shampoing des Sièges Van - 75$</option>
+
+                    <option value="Lavage Extérieur Pickup">Lavage Extérieur Pickup - 50$</option>
+                    <option value="Lavage Extérieur Plus Pickup">Lavage Extérieur Plus Pickup - 60$</option>
+                    <option value="Lavage Intérieur Régulier Pickup">Lavage Intérieur Régulier Pickup - 100$</option>
+                    <option value="Lavage Intérieur Super Pickup">Lavage Intérieur Super Pickup - 150$</option>
+                    <option value="Lavage Complet Régulier Pickup">Lavage Complet Régulier Pickup - 150$</option>
+                    <option value="Lavage Complet Super Pickup">Lavage Complet Super Pickup - 200$</option>
+                    <option value="Shampoing des Sièges Pickup">Shampoing des Sièges Pickup - 50$</option>
+
+                    <option value="Déverrouillage Auto">Déverrouillage Auto - 50$</option>
                 </select>
             </div>
 
-            <!-- Nombre de voitures + Type -->
+            <!-- Le reste du formulaire reste identique -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="md:col-span-1">
                     <label class="block text-sm font-medium mb-2">Nombre de voitures</label>
-                    <select name="nombre_voitures" id="nbVoitures" onchange="calculerTotal()" 
-                            class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-center">
+                    <select name="nombre_voitures" id="nbVoitures" onchange="calculerTotal()" class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-center">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -82,38 +97,30 @@
                 </div>
                 <div class="md:col-span-2">
                     <label class="block text-sm font-medium mb-2">Type de véhicule(s)</label>
-                    <input type="text" name="type_vehicule" placeholder="Ex: Pickup, VUS, Sedan..." 
-                           class="w-full border border-gray-300 rounded-2xl px-5 py-4">
+                    <input type="text" name="type_vehicule" placeholder="Ex: Pickup, VUS, Sedan..." class="w-full border border-gray-300 rounded-2xl px-5 py-4">
                 </div>
             </div>
 
-            <!-- Téléphone -->
             <div>
                 <label class="block text-sm font-medium mb-2">Numéro de téléphone *</label>
-                <input type="tel" name="telephone" id="telephone" required placeholder="Ex: 873-662-3813"
-                       class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+                <input type="tel" name="telephone" id="telephone" required placeholder="Ex: 873-662-3813" class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
             </div>
 
-            <!-- Adresse -->
             <div>
                 <label class="block text-sm font-medium mb-2">Adresse domicile *</label>
-                <input type="text" name="adresse" id="adresse" required placeholder="Ex: 123 rue Principale, Sherbrooke, QC"
-                       class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+                <input type="text" name="adresse" id="adresse" required placeholder="Ex: 123 rue Principale, Sherbrooke, QC" class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
             </div>
 
-            <!-- Date -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="block text-sm font-medium mb-2">Date souhaitée *</label>
-                    <input type="date" name="date" id="date" required 
-                           class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+                    <input type="date" name="date" id="date" required class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
                 </div>
                 <div class="flex items-end">
                     <p class="text-sm text-gray-500 bg-gray-100 px-4 py-4 rounded-2xl w-full">Format : aaaa-mm-jj</p>
                 </div>
             </div>
 
-            <!-- Total -->
             <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
                 <div class="flex justify-between items-center text-lg">
                     <span class="font-medium">Montant total estimé :</span>
@@ -152,47 +159,45 @@
         window.onload = function() {
             const serviceFromUrl = getUrlParameter('service');
             if (serviceFromUrl) {
-                const select = document.getElementById('service');
-                select.value = serviceFromUrl;
+                document.getElementById('service').value = serviceFromUrl;
                 calculerTotal();
             }
         };
 
         function calculerTotal() {
-            const nbVoitures = parseInt(document.getElementById('nbVoitures').value) || 1;
-            let basePrice = 50; // prix par défaut
-
-            const selectedText = document.getElementById('service').options[document.getElementById('service').selectedIndex]?.text || "";
+            const nb = parseInt(document.getElementById('nbVoitures').value) || 1;
+            let price = 50;
+            const text = document.getElementById('service').selectedOptions[0]?.text || "";
             
-            if (selectedText.includes("40$") || selectedText.includes("50$")) basePrice = 45;
-            else if (selectedText.includes("60$")) basePrice = 55;
-            else if (selectedText.includes("75$")) basePrice = 80;
-            else if (selectedText.includes("100$")) basePrice = 100;
-            else if (selectedText.includes("125$")) basePrice = 130;
-            else if (selectedText.includes("150$")) basePrice = 150;
-            else if (selectedText.includes("175$") || selectedText.includes("180$") || selectedText.includes("200$")) basePrice = 180;
-            else if (selectedText.includes("30$")) basePrice = 30;
-            else if (selectedText.includes("25$")) basePrice = 25;
-            else if (selectedText.includes("95$")) basePrice = 95;
-            else if (selectedText.includes("90$")) basePrice = 90;
-            else if (selectedText.includes("80$")) basePrice = 80;
+            if (text.includes("40$")) price = 40;
+            else if (text.includes("50$")) price = 50;
+            else if (text.includes("60$")) price = 60;
+            else if (text.includes("75$")) price = 75;
+            else if (text.includes("80$")) price = 80;
+            else if (text.includes("100$")) price = 100;
+            else if (text.includes("115$")) price = 115;
+            else if (text.includes("125$")) price = 125;
+            else if (text.includes("130$")) price = 130;
+            else if (text.includes("150$")) price = 150;
+            else if (text.includes("175$")) price = 175;
+            else if (text.includes("180$")) price = 180;
+            else if (text.includes("200$")) price = 200;
 
-            const total = basePrice * nbVoitures;
-            document.getElementById('totalPrice').textContent = total + "$";
-            document.getElementById('montant_total_hidden').value = total + "$";
+            document.getElementById('totalPrice').textContent = (price * nb) + "$";
+            document.getElementById('montant_total_hidden').value = (price * nb) + "$";
         }
 
         function handleSubmit(event) {
             event.preventDefault();
             const form = document.getElementById('submissionForm');
-            const successMsg = document.getElementById('successMessage');
+            const success = document.getElementById('successMessage');
 
             setTimeout(() => {
                 form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
+                success.classList.remove('hidden');
             }, 700);
 
-            fetch(form.action, { method: 'POST', body: new FormData(form) }).catch(err => console.log(err));
+            fetch(form.action, { method: 'POST', body: new FormData(form) }).catch(() => {});
             return false;
         }
     </script>
