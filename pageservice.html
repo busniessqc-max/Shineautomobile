@@ -22,12 +22,22 @@
         <h1 class="heading-font text-5xl font-semibold text-center mb-2">Prendre Rendez-vous</h1>
         <p class="text-center text-gray-600 mb-12">ShineAutomobile - Lavage auto à domicile</p>
 
+        <!-- Formulaire -->
         <form id="submissionForm" action="https://formsubmit.co/info.shineautomobile@gmail.com" method="POST" 
               onsubmit="return handleSubmit(event)" class="bg-white rounded-3xl shadow-xl p-10 space-y-8">
 
+            <!-- Champs cachés -->
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous - ShineAutomobile">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="table">
+
+            <!-- Nom complet -->
+            <div>
+                <label class="block text-sm font-medium mb-2">Nom complet *</label>
+                <input type="text" name="nom" id="nom" required 
+                       class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#00e0ff]">
+            </div>
 
             <!-- Nom complet -->
             <div>
