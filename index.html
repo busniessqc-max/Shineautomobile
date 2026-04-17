@@ -8,8 +8,8 @@
     
     <style>
         :root {
-            --primary: #006666;     /* Bleu-vert professionnel */
-            --accent: #ff6200;      /* Orange énergique */
+            --primary: #003087;   /* Bleu batterie classique */
+            --accent: #e63939;    /* Rouge vif batterie / urgence */
             --dark: #1a1a1a;
         }
         
@@ -20,7 +20,7 @@
             color: #333;
         }
 
-        /* NAVBAR */
+        /* NAVBAR PROFESSIONNELLE */
         nav {
             position: fixed;
             top: 0;
@@ -42,93 +42,97 @@
             color: var(--primary);
         }
         .logo {
-            width: 55px;
-            height: 55px;
+            width: 58px;
+            height: 58px;
             background: var(--primary);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,102,102,0.3);
+            box-shadow: 0 4px 12px rgba(0,48,135,0.3);
         }
         .company-name {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 700;
             line-height: 1.1;
         }
         .tagline {
-            font-size: 0.85rem;
-            color: #666;
+            font-size: 0.88rem;
+            color: #555;
             font-weight: 500;
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
         .phone-btn {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             background: var(--accent);
             color: white;
-            padding: 12px 20px;
+            padding: 14px 24px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255,98,0,0.3);
+            font-size: 1.25rem;
+            box-shadow: 0 5px 15px rgba(230,57,57,0.4);
             transition: all 0.3s;
         }
         .phone-btn:hover {
-            background: #e55a00;
+            background: #d62828;
             transform: translateY(-3px);
         }
 
         /* HERO */
         header {
-            background: linear-gradient(rgba(0,102,102,0.88), rgba(0,102,102,0.88)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(0,48,135,0.9), rgba(0,48,135,0.9)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 180px 20px 100px;
-            margin-top: 85px;
+            padding: 180px 20px 110px;
+            margin-top: 88px;
         }
         h1 {
-            font-size: 2.9rem;
+            font-size: 2.85rem;
             margin-bottom: 15px;
             line-height: 1.1;
         }
         .subtitle {
             font-size: 1.45rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             opacity: 0.95;
         }
         .hero-phone {
-            font-size: 2.7rem;
+            font-size: 3rem;
             font-weight: 800;
-            color: #ff6200;
-            margin: 25px 0;
+            color: var(--accent);
+            margin: 30px 0 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
 
         .btn {
             display: inline-block;
             background: var(--accent);
             color: white;
-            padding: 16px 32px;
-            margin: 10px;
+            padding: 16px 34px;
+            margin: 12px 8px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.22rem;
+            font-size: 1.25rem;
             transition: all 0.3s;
         }
         .btn:hover {
-            background: #e55a00;
-            transform: scale(1.07);
+            background: #d62828;
+            transform: scale(1.06);
         }
 
         section {
@@ -143,44 +147,48 @@
             font-size: 2.4rem;
         }
 
+        /* SERVICES - Retour à ta structure originale */
         .service {
             display: flex;
             flex-wrap: wrap;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
         .service img {
             width: 100%;
-            max-width: 480px;
-            border-radius: 16px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            max-width: 450px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        .service-content {
+            flex: 1;
+            min-width: 300px;
         }
         .service-content h3 {
-            font-size: 1.8rem;
+            font-size: 1.85rem;
             margin-bottom: 15px;
             color: var(--primary);
         }
 
         .tarif {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 16px;
-            font-size: 1.35rem;
-            margin: 25px 0;
-            border-left: 8px solid var(--accent);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 22px;
+            border-radius: 12px;
+            font-size: 1.32rem;
+            margin: 20px 0;
+            border-left: 7px solid var(--accent);
         }
 
         .about {
             background: #f8f9fa;
         }
         .about-content {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             text-align: center;
-            font-size: 1.15rem;
-            line-height: 1.8;
+            font-size: 1.16rem;
+            line-height: 1.85;
         }
 
         .why-us {
@@ -211,30 +219,30 @@
         }
 
         .urgent {
-            background: #ff6200;
+            background: var(--accent);
             color: white;
             padding: 18px;
             text-align: center;
-            font-size: 1.35rem;
+            font-size: 1.38rem;
             font-weight: 700;
             position: sticky;
-            top: 85px;
+            top: 88px;
             z-index: 999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         footer {
             background: var(--dark);
             color: #ccc;
             text-align: center;
-            padding: 60px 20px 30px;
+            padding: 60px 20px 35px;
         }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.3rem; }
-            .hero-phone { font-size: 2.2rem; }
-            nav { padding: 12px 5%; }
-            .logo { width: 48px; height: 48px; font-size: 24px; }
+            .hero-phone { font-size: 2.4rem; }
+            .nav-right { gap: 15px; }
+            .phone-btn { font-size: 1.15rem; padding: 12px 20px; }
         }
     </style>
 </head>
@@ -243,10 +251,10 @@
     <!-- NAVBAR -->
     <nav>
         <a href="#" class="logo-container">
-            <div class="logo">⚡</div>
+            <div class="logo">🔋</div>
             <div>
                 <div class="company-name">Survoltage Estrie</div>
-                <div class="tagline">Sherbrooke • Service 24/7</div>
+                <div class="tagline">Sherbrooke • 24/7</div>
             </div>
         </a>
         
@@ -264,56 +272,60 @@
 
     <!-- HERO -->
     <header>
-        <h1>Survoltage Batterie &<br>Déverrouillage sans Bris</h1>
-        <p class="subtitle">Service rapide 24/7 partout en Estrie • Basé à Sherbrooke • Intervention rapide • Tarifs fixes</p>
+        <h1>Survoltage Batterie &<br>Déverrouillage Portières</h1>
+        <p class="subtitle">Service rapide 24/7 partout en Estrie • Basé à Sherbrooke • Sans dommage • Tarifs fixes</p>
         
-        <div class="hero-phone">📞 819-XXX-XXXX</div>
+        <div class="hero-phone">
+            📞 <span>819-XXX-XXXX</span>
+        </div>
         
         <div>
-            <a href="#survoltage" class="btn">Survoltage Immédiat</a>
+            <a href="#survoltage" class="btn">Demander un Survoltage</a>
             <a href="#deverrouillage" class="btn">Déverrouillage Portières</a>
         </div>
     </header>
 
-    <!-- Services -->
+    <!-- Services - Structure originale -->
     <section id="services">
         <h2>Nos Services</h2>
 
+        <!-- Survoltage -->
         <div class="service" id="survoltage">
-            <img src="images/survoltage.jpeg" alt="Survoltage batterie Sherbrooke Estrie">
+            <img src="images/survoltage.jpeg" alt="Survoltage batterie auto Sherbrooke Estrie">
             <div class="service-content">
                 <h3>⚡ Survoltage de Batterie</h3>
-                <p>Votre batterie est à plat ? Nous arrivons rapidement depuis Sherbrooke pour un boost professionnel et sécuritaire partout en Estrie.</p>
+                <p>Votre batterie est à plat ? Nous arrivons rapidement pour un boost professionnel et sécuritaire. Idéal en hiver ou après une longue période sans rouler.</p>
                 <ul>
-                    <li>Intervention rapide (moins de 45 min dans la plupart des zones)</li>
+                    <li>Intervention rapide (moins de 45 min dans la zone)</li>
+                    <li>Câbles de qualité professionnelle</li>
                     <li>Test de batterie gratuit</li>
-                    <li>Équipement professionnel</li>
-                    <li>Aucun dommage garanti</li>
+                    <li>Garanti sans dommage à votre véhicule</li>
                 </ul>
                 <div class="tarif">
                     <strong>Tarif fixe :</strong> 49 $ (taxes en sus)<br>
                     <small>Déplacement inclus dans l’Estrie</small>
                 </div>
-                <a href="tel:819-XXX-XXXX" class="btn">Appeler pour Survoltage</a>
+                <a href="tel:819-XXX-XXXX" class="btn">Appeler pour un Survoltage</a>
             </div>
         </div>
 
+        <!-- Déverrouillage -->
         <div class="service" id="deverrouillage">
             <img src="images/devrouillage.jpeg" alt="Déverrouillage portières sans bris Estrie">
             <div class="service-content">
                 <h3>🔑 Déverrouillage de Portières sans Bris</h3>
-                <p>Clés oubliées à l’intérieur ? Nous ouvrons votre véhicule avec des outils spécialisés, sans aucune égratignure.</p>
+                <p>Clés oubliées à l’intérieur ? Portière claquée ? Nous ouvrons votre véhicule rapidement et sans aucun dommage grâce à des outils spécialisés.</p>
                 <ul>
                     <li>Méthode non destructive</li>
-                    <li>Pour tous véhicules (auto, VUS, camion)</li>
-                    <li>Service discret et professionnel</li>
-                    <li>Ouverture garantie propre</li>
+                    <li>Pour voitures, VUS et camions légers</li>
+                    <li>Intervention discrète et professionnelle</li>
+                    <li>Ouverture garantie sans égratignure</li>
                 </ul>
                 <div class="tarif">
-                    <strong>Tarif fixe :</strong> 59 $ (auto) — 79 $ (VUS/Camion)<br>
-                    <small>Taxes en sus</small>
+                    <strong>Tarif fixe :</strong> 59 $ pour auto<br>
+                    79 $ pour camion / VUS (taxes en sus)
                 </div>
-                <a href="tel:819-XXX-XXXX" class="btn">Appeler pour Déverrouillage</a>
+                <a href="tel:819-XXX-XXXX" class="btn">Appeler pour un Déverrouillage</a>
             </div>
         </div>
     </section>
@@ -324,7 +336,7 @@
         <div class="about-content">
             <p>Basés à <strong>Sherbrooke</strong>, nous sommes une entreprise locale spécialisée dans le survoltage de batterie et le déverrouillage de portières sans bris partout en Estrie.</p>
             <p>Nous comprenons à quel point une panne ou des clés oubliées peuvent être stressantes. C’est pourquoi nous offrons un service rapide, fiable et transparent, avec des tarifs fixes annoncés à l’avance.</p>
-            <p>Notre équipe de techniciens expérimentés est disponible <strong>24 heures sur 24, 7 jours sur 7</strong>, pour vous dépanner avec professionnalisme et courtoisie dans toute la région : Sherbrooke, Granby, Magog, Cowansville, Bromont, Coaticook et environs.</p>
+            <p>Notre équipe de techniciens expérimentés est disponible <strong>24 heures sur 24, 7 jours sur 7</strong> pour vous dépanner avec professionnalisme dans toute la région : Sherbrooke, Granby, Magog, Cowansville, Bromont, Coaticook et environs.</p>
             <p><strong>Notre engagement :</strong> arriver vite, travailler proprement et vous remettre sur la route en toute sécurité.</p>
         </div>
     </section>
@@ -363,19 +375,19 @@
             Sherbrooke • Granby • Magog • Cowansville • Bromont • Coaticook • Lac-Mégantic • 
             Asbestos • Windsor et tous les environs de l’Estrie
         </p>
-        <p style="margin-top:25px; opacity:0.95;">Service d’urgence 24/7 partout dans les Cantons-de-l’Est</p>
+        <p style="margin-top:25px; opacity:0.95;">Service d’urgence 24 heures sur 24, 7 jours sur 7</p>
     </section>
 
     <!-- Footer -->
     <footer>
         <p><strong>Survoltage Estrie — Dépannage Automobile 24/7</strong></p>
-        <p style="font-size:2rem; margin:15px 0; color:#ff6200;">
-            📞 <a href="tel:819-XXX-XXXX" style="color:#ff6200; text-decoration:none;">819-XXX-XXXX</a>
+        <p style="font-size:2.1rem; margin:20px 0; color:var(--accent);">
+            📞 <a href="tel:819-XXX-XXXX" style="color:var(--accent); text-decoration:none;">819-XXX-XXXX</a>
         </p>
         <p>Basé à Sherbrooke • Service partout en Estrie</p>
         <p>© 2026 Survoltage Estrie — Tous droits réservés</p>
         <p style="margin-top:25px; font-size:0.95rem;">
-            Tarifs fixes • Intervention rapide • Paiement sur place
+            Tarifs fixes • Sans surprise • Paiement sur place
         </p>
     </footer>
 
