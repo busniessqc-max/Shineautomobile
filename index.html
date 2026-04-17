@@ -3,179 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Survoltage batterie et déverrouillage portières sans bris à Montréal. Service rapide 24/7 - Tarifs fixes.">
-    <title>Survoltage & Déverrouillage Montréal 24/7</title>
+    <meta name="description" content="Survoltage batterie et déverrouillage portières sans bris à Montréal. Service rapide 24/7 - Tarifs fixes - Intervention en moins de 45 minutes.">
+    <title>Survoltage & Déverrouillage Montréal | Service 24/7</title>
+    
     <style>
         :root {
             --primary: #003087;
             --accent: #ff6200;
+            --dark: #1a1a1a;
         }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
         }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--primary);
+        }
+        .logo {
+            width: 55px;
+            height: 55px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,48,135,0.3);
+        }
+        .company-name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .tagline {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .phone-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255,98,0,0.3);
+            transition: all 0.3s;
+        }
+        .phone-btn:hover {
+            background: #e55a00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,98,0,0.4);
+        }
+
+        /* HERO */
         header {
-            background: linear-gradient(rgba(0,48,135,0.9), rgba(0,48,135,0.9)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(0,48,135,0.85), rgba(0,48,135,0.85)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 120px 20px 80px;
+            padding: 180px 20px 100px;
+            margin-top: 85px;
         }
         h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 15px;
+            line-height: 1.1;
         }
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 30px;
+            opacity: 0.95;
         }
-        .phone {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .hero-phone {
+            font-size: 2.8rem;
+            font-weight: 800;
             color: #ff6200;
-            text-decoration: none;
-            display: inline-block;
-            margin: 20px 0;
+            margin: 25px 0;
         }
-        .phone:hover { color: #ff8c33; }
+
         .btn {
             display: inline-block;
             background: var(--accent);
             color: white;
-            padding: 15px 30px;
+            padding: 16px 32px;
             margin: 10px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: all 0.3s;
         }
         .btn:hover {
             background: #e55a00;
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
+
         section {
-            padding: 60px 20px;
-            max-width: 1100px;
+            padding: 80px 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         h2 {
             text-align: center;
             color: var(--primary);
-            margin-bottom: 40px;
-            font-size: 2.2rem;
+            margin-bottom: 50px;
+            font-size: 2.4rem;
         }
+
         .service {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
             align-items: center;
-            margin-bottom: 60px;
+            margin-bottom: 100px;
         }
         .service img {
             width: 100%;
-            max-width: 450px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-width: 480px;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         .service-content {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
         }
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
         .tarif {
             background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            font-size: 1.3rem;
-            margin: 15px 0;
-            border-left: 6px solid var(--accent);
+            padding: 25px;
+            border-radius: 16px;
+            font-size: 1.35rem;
+            margin: 25px 0;
+            border-left: 8px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
+
+        .why-us {
+            background: #f8f9fa;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .feature i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
         .zone {
-            background: #003087;
+            background: var(--primary);
             color: white;
             text-align: center;
         }
-        footer {
-            background: #222;
-            color: #ccc;
-            text-align: center;
-            padding: 40px 20px;
-        }
+
         .urgent {
             background: #ff6200;
             color: white;
-            padding: 20px;
+            padding: 18px;
             text-align: center;
-            font-size: 1.4rem;
-            font-weight: bold;
+            font-size: 1.35rem;
+            font-weight: 700;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
+
+        footer {
+            background: var(--dark);
+            color: #ccc;
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .phone { font-size: 2rem; }
+            h1 { font-size: 2.3rem; }
+            .hero-phone { font-size: 2.2rem; }
+            nav { padding: 12px 5%; }
+            .logo { width: 48px; height: 48px; font-size: 24px; }
+            .company-name { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Hero -->
-    <header>
-        <h1>Survoltage Batterie & Déverrouillage Portières</h1>
-        <p class="subtitle">Service rapide 24/7 à Montréal et environs • Sans dommage • Tarifs fixes</p>
+    <!-- NAVBAR PROFESSIONNELLE -->
+    <nav>
+        <a href="#" class="logo-container">
+            <div class="logo">⚡</div>
+            <div>
+                <div class="company-name">Survoltage Montréal</div>
+                <div class="tagline">Dépannage Auto 24/7</div>
+            </div>
+        </a>
         
-        <a href="tel:514XXX-XXXX" class="phone">📞 514-XXX-XXXX</a>
-        
-        <div>
-            <a href="#survoltage" class="btn">Demander un Survoltage</a>
-            <a href="#deverrouillage" class="btn">Déverrouillage Portières</a>
+        <div class="nav-right">
+            <a href="tel:514-XXX-XXXX" class="phone-btn">
+                📞 <span>514-XXX-XXXX</span>
+            </a>
         </div>
-    </header>
+    </nav>
 
     <!-- Urgent Bar -->
     <div class="urgent">
-        En panne ? Appelez maintenant → <a href="tel:514XXX-XXXX" style="color:white; text-decoration:underline;">514-XXX-XXXX</a>
+        🚨 En panne ou clés oubliées ? Appelez maintenant → <a href="tel:514-XXX-XXXX" style="color:white; text-decoration:underline;">514-XXX-XXXX</a>
     </div>
+
+    <!-- HERO -->
+    <header>
+        <h1>Survoltage Batterie &<br>Déverrouillage sans Bris</h1>
+        <p class="subtitle">Service rapide 24/7 • Montréal & Grand Montréal • Intervention en moins de 45 min</p>
+        
+        <div class="hero-phone">📞 514-XXX-XXXX</div>
+        
+        <div>
+            <a href="#survoltage" class="btn">Survoltage Immédiat</a>
+            <a href="#deverrouillage" class="btn">Déverrouillage Portières</a>
+        </div>
+    </header>
 
     <!-- Services -->
     <section id="services">
         <h2>Nos Services</h2>
 
-        <!-- Survoltage -->
         <div class="service" id="survoltage">
-            <img src="images/survoltage.jpeg" alt="Survoltage batterie auto Montréal">
+            <img src="images/survoltage.jpeg" alt="Survoltage batterie Montréal">
             <div class="service-content">
                 <h3>⚡ Survoltage de Batterie</h3>
-                <p>Votre batterie est à plat ? Nous arrivons rapidement pour un boost professionnel et sécuritaire. Idéal en hiver ou après une longue période sans rouler.</p>
+                <p>Votre batterie est morte ? Nous arrivons rapidement avec un équipement professionnel pour redémarrer votre véhicule en toute sécurité.</p>
                 <ul>
-                    <li>Intervention rapide (moins de 45 min dans la zone)</li>
-                    <li>Câbles de qualité professionnelle</li>
+                    <li>Intervention en moins de 45 minutes</li>
                     <li>Test de batterie gratuit</li>
-                    <li>Garanti sans dommage à votre véhicule</li>
+                    <li>Matériel professionnel</li>
+                    <li>Aucun dommage garanti</li>
                 </ul>
                 <div class="tarif">
                     <strong>Tarif fixe :</strong> 49 $ (taxes en sus)<br>
-                    <small>Déplacement inclus dans Montréal et environs</small>
+                    <small>Déplacement inclus dans la zone desservie</small>
                 </div>
-                <a href="tel:514XXX-XXXX" class="btn">Appeler pour un Survoltage</a>
+                <a href="tel:514-XXX-XXXX" class="btn">Appeler pour Survoltage</a>
             </div>
         </div>
 
-        <!-- Déverrouillage -->
         <div class="service" id="deverrouillage">
             <img src="images/devrouillage.jpeg" alt="Déverrouillage portières sans bris Montréal">
             <div class="service-content">
                 <h3>🔑 Déverrouillage de Portières sans Bris</h3>
-                <p>Clés oubliées à l’intérieur ? Portière claquée ? Nous ouvrons votre véhicule rapidement et sans aucun dommage grâce à des outils spécialisés.</p>
+                <p>Clés à l’intérieur ? Nous ouvrons votre véhicule avec des outils spécialisés, sans aucune trace ni dommage.</p>
                 <ul>
-                    <li>Méthode non destructive</li>
-                    <li>Pour voitures, VUS et camions légers</li>
-                    <li>Intervention discrète et professionnelle</li>
-                    <li>Ouverture garantie sans égratignure</li>
+                    <li>Technique non destructive</li>
+                    <li>Pour tous types de véhicules</li>
+                    <li>Intervention discrète et rapide</li>
+                    <li>Ouverture garantie propre</li>
                 </ul>
                 <div class="tarif">
-                    <strong>Tarif fixe :</strong> 59 $ pour auto<br>
-                    79 $ pour camion / VUS (taxes en sus)
+                    <strong>Tarif fixe :</strong> 59 $ (auto) — 79 $ (VUS/Camion)<br>
+                    <small>Taxes en sus</small>
                 </div>
-                <a href="tel:514XXX-XXXX" class="btn">Appeler pour un Déverrouillage</a>
+                <a href="tel:514-XXX-XXXX" class="btn">Appeler pour Déverrouillage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous choisir -->
+    <section class="why-us">
+        <h2>Pourquoi nous choisir ?</h2>
+        <div class="features">
+            <div class="feature">
+                <i>⏱️</i>
+                <h4>Intervention Rapide</h4>
+                <p>Moins de 45 minutes dans la plupart des cas</p>
+            </div>
+            <div class="feature">
+                <i>🔒</i>
+                <h4>Sans Dommage</h4>
+                <p>Techniques professionnelles qui préservent votre véhicule</p>
+            </div>
+            <div class="feature">
+                <i>💰</i>
+                <h4>Tarifs Fixes</h4>
+                <p>Pas de surprise, prix annoncé à l'avance</p>
+            </div>
+            <div class="feature">
+                <i>🛡️</i>
+                <h4>Service 24/7</h4>
+                <p>Disponible jour et nuit, 7 jours sur 7</p>
             </div>
         </div>
     </section>
@@ -183,17 +343,21 @@
     <!-- Zone desservie -->
     <section class="zone">
         <h2>Zone desservie</h2>
-        <p>Montréal • Laval • Rive-Sud • Longueuil • Rive-Nord<br>
-        Intervention rapide partout dans le Grand Montréal 24 heures sur 24, 7 jours sur 7.</p>
+        <p style="font-size:1.3rem; max-width:800px; margin:0 auto;">
+            Montréal • Laval • Longueuil • Rive-Sud • Rive-Nord • Brossard • Pointe-Claire • Dorval et environs
+        </p>
+        <p style="margin-top:20px; opacity:0.9;">Service d'urgence 24 heures sur 24, 7 jours sur 7</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p><strong>Service d'urgence 24/7</strong></p>
-        <p>📞 <a href="tel:514XXX-XXXX" style="color:#ff6200;">514-XXX-XXXX</a></p>
-        <p>© 2026 [Nom de ta compagnie]. Tous droits réservés.</p>
-        <p style="font-size:0.9rem; margin-top:20px;">
-            Tarifs fixes • Pas de surprise • Paiement sur place
+        <p><strong>Service d'urgence automobile 24/7</strong></p>
+        <p style="font-size:2rem; margin:15px 0; color:#ff6200;">
+            📞 <a href="tel:514-XXX-XXXX" style="color:#ff6200; text-decoration:none;">514-XXX-XXXX</a>
+        </p>
+        <p>© 2026 Survoltage Montréal — Tous droits réservés</p>
+        <p style="margin-top:25px; font-size:0.95rem;">
+            Tarifs fixes • Service professionnel • Paiement sur place
         </p>
     </footer>
 
