@@ -50,6 +50,24 @@
             background-color: rgba(212, 175, 119, 0.95);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
+
+        .category-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .category-card:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="tailwind-ready">
@@ -100,6 +118,8 @@
                 </div>
             </div>
         </div>
+    </nav>
+
     <!-- HERO DIAPORAMA (10 photos) -->
     <section id="accueil" class="relative h-screen">
         <div id="hero-slider" class="relative h-full overflow-hidden">
@@ -215,71 +235,81 @@
         </div>
     </section>
 
-    <!-- MENU -->
+    <!-- MENU - NOUVELLES CATÉGORIES -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-6 py-2 bg-amber-100 text-amber-700 rounded-3xl text-sm font-medium">Notre Carte Complète</span>
+                <h2 class="heading-font text-5xl font-bold mt-4">Choisissez votre catégorie</h2>
+                <p class="mt-4 text-xl text-stone-600 max-w-md mx-auto">Cliquez sur une section pour découvrir nos produits frais</p>
+            </div>
 
-<section class="py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Dessert -->
+                <a href="dessert.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/1080/600/400" alt="Desserts Syriens" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Dessert</h3>
+                        <p class="text-stone-500 text-sm">Baklava, Kunafa, Maamoul et plus</p>
+                    </div>
+                </a>
 
-<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+                <!-- Croissant -->
+                <a href="croissant.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Croissants" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Croissant</h3>
+                        <p class="text-stone-500 text-sm">Viennoiseries fraîches du jour</p>
+                    </div>
+                </a>
 
-<a href="dessert.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
+                <!-- Manakish -->
+                <a href="manakish.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/292/600/400" alt="Manakish" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Manakish</h3>
+                        <p class="text-stone-500 text-sm">Pain plat syrien traditionnel</p>
+                    </div>
+                </a>
 
-<img src="https://picsum.photos/400/300?dessert" class="w-full h-40 object-cover">
+                <!-- Café -->
+                <a href="cafe.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/133/600/400" alt="Café" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Café</h3>
+                        <p class="text-stone-500 text-sm">Café arabe et spécialités</p>
+                    </div>
+                </a>
 
-<div class="p-4 text-center text-xl font-bold">Desserts</div>
+                <!-- Lait fouetté -->
+                <a href="laitfouette.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/312/600/400" alt="Lait fouetté" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Lait fouetté</h3>
+                        <p class="text-stone-500 text-sm">Boissons crémeuses maison</p>
+                    </div>
+                </a>
 
-</a>
+                <!-- Crème glacée -->
+                <a href="cremeglace.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/451/600/400" alt="Crème glacée" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Crème glacée</h3>
+                        <p class="text-stone-500 text-sm">Saveurs artisanales</p>
+                    </div>
+                </a>
 
-<a href="croissant.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
-
-<img src="https://picsum.photos/400/300?croissant" class="w-full h-40 object-cover">
-
-<div class="p-4 text-center text-xl font-bold">Croissant</div>
-
-</a>
-
-<a href="manakish.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
-
-<img src="https://picsum.photos/400/300?pizza" class="w-full h-40 object-cover">
-
-<div class="p-4 text-center text-xl font-bold">Manakish</div>
-
-</a>
-
-<a href="cafe.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
-
-<img src="https://picsum.photos/400/300?coffee" class="w-full h-40 object-cover">
-
-<div class="p-4 text-center text-xl font-bold">Café</div>
-
-</a>
-
-<a href="laitfouette.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
-
-<img src="https://picsum.photos/400/300?milkshake" class="w-full h-40 object-cover">
-
-<div class="p-4 text-center text-xl font-bold">Lait fouetté</div>
-
-</a>
-
-<a href="cremeglace.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
-
-<img src="https://picsum.photos/400/300?icecream" class="w-full h-40 object-cover">
-
-<div class="p-4 text-center text-xl font-bold">Crème glacée</div>
-
-</a>
-
-<a href="boisson.html" class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105">
-
-<img src="https://picsum.photos/400/300?drink" class="w-full h-40 object-cover">
-
-<div class="p-4 text-center text-xl font-bold">Boissons</div>
-
-</a>
-
-</div>
-
-</section>
+                <!-- Boisson -->
+                <a href="boisson.html" class="category-card bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover block">
+                    <img src="https://picsum.photos/id/870/600/400" alt="Boissons" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold mb-1">Boisson</h3>
+                        <p class="text-stone-500 text-sm">Jus frais et rafraîchissants</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- GALERIE -->
     <section id="galerie" class="py-20 bg-stone-900 text-white">
@@ -489,157 +519,6 @@
             }, 5000)
         }
 
-        // ================== MENU - 20 items ==================
-        const menuItems = [
-            {
-                name: "Baklava aux Pistaches",
-                desc: "Feuilles de pâte filo croustillantes, pistaches fraîches et sirop à la rose",
-                price: "6,99 $",
-                img: "https://picsum.photos/id/1015/600/400"
-            },
-            {
-                name: "Kunafa au Fromage",
-                desc: "Kunafa dorée, fromage akawi fondant et sirop chaud",
-                price: "7,99 $",
-                img: "https://picsum.photos/id/292/600/400"
-            },
-            {
-                name: "Maamoul Pistache",
-                desc: "Biscuit sablé fourré à la pistache, sucre glace",
-                price: "4,99 $",
-                img: "https://picsum.photos/id/431/600/400"
-            },
-            {
-                name: "Halawet el Jibn",
-                desc: "Crêpe au fromage frais, pistaches et sirop d’orange",
-                price: "5,49 $",
-                img: "https://picsum.photos/id/1005/600/400"
-            },
-            {
-                name: "Namoura",
-                desc: "Gâteau de semoule dorée, amandes et fleur d’oranger",
-                price: "3,99 $",
-                img: "https://picsum.photos/id/133/600/400"
-            },
-            {
-                name: "Znoud el Sit",
-                desc: "Rouleaux de crêpe à la crème, frites et nappés de sirop",
-                price: "5,99 $",
-                img: "https://picsum.photos/id/312/600/400"
-            },
-            {
-                name: "Warbat aux Noix",
-                desc: "Triangle filo aux noix et miel parfumé",
-                price: "4,49 $",
-                img: "https://picsum.photos/id/451/600/400"
-            },
-            {
-                name: "Kataifi aux Amandes",
-                desc: "Nid de cheveux d’ange aux amandes grillées",
-                price: "6,49 $",
-                img: "https://picsum.photos/id/160/600/400"
-            },
-            {
-                name: "Maamoul aux Dattes",
-                desc: "Biscuit traditionnel fourré aux dattes parfumées",
-                price: "4,99 $",
-                img: "https://picsum.photos/id/201/600/400"
-            },
-            {
-                name: "Baklava aux Noix",
-                desc: "Classique aux noix de Grenoble et miel",
-                price: "5,99 $",
-                img: "https://picsum.photos/id/870/600/400"
-            },
-            {
-                name: "Kunafa Pistache",
-                desc: "Kunafa garnie de pistaches concassées",
-                price: "8,49 $",
-                img: "https://picsum.photos/id/1015/600/400"
-            },
-            {
-                name: "Barazek (Sésame)",
-                desc: "Biscuits au sésame et pistache grillée",
-                price: "3,49 $",
-                img: "https://picsum.photos/id/292/600/400"
-            },
-            {
-                name: "Ghraybeh",
-                desc: "Biscuits beurre fondants à la pistache",
-                price: "3,99 $",
-                img: "https://picsum.photos/id/431/600/400"
-            },
-            {
-                name: "Sfouf",
-                desc: "Gâteau de semoule au curcuma et amandes",
-                price: "4,29 $",
-                img: "https://picsum.photos/id/1005/600/400"
-            },
-            {
-                name: "Othmaliyeh",
-                desc: "Kunafa fine nappée de sirop et pistaches",
-                price: "6,99 $",
-                img: "https://picsum.photos/id/133/600/400"
-            },
-            {
-                name: "Mabrouma",
-                desc: "Rouleau de pistaches et pâte filo",
-                price: "5,79 $",
-                img: "https://picsum.photos/id/312/600/400"
-            },
-            {
-                name: "Basbousa",
-                desc: "Gâteau de semoule à la noix de coco",
-                price: "3,79 $",
-                img: "https://picsum.photos/id/451/600/400"
-            },
-            {
-                name: "Qatayef",
-                desc: "Crêpes fourrées aux noix et sirop (saison)",
-                price: "5,99 $",
-                img: "https://picsum.photos/id/160/600/400"
-            },
-            {
-                name: "Halva Pistache",
-                desc: "Halva tahini aux pistaches concassées",
-                price: "4,99 $",
-                img: "https://picsum.photos/id/201/600/400"
-            },
-            {
-                name: "Fingers au Fromage",
-                desc: "Feuilletés croustillants au fromage syrien",
-                price: "4,49 $",
-                img: "https://picsum.photos/id/870/600/400"
-            }
-        ]
-
-        function renderMenu() {
-            const grid = document.getElementById('menu-grid')
-            grid.innerHTML = ''
-
-            menuItems.forEach(item => {
-                const card = document.createElement('div')
-                card.className = 'bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover'
-                card.innerHTML = `
-                    <img src="${item.img}" alt="${item.name}" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-semibold text-xl mb-1">${item.name}</h3>
-                        <p class="text-stone-600 text-sm line-clamp-2 mb-6">${item.desc}</p>
-                        <div class="flex justify-between items-end">
-                            <span class="text-3xl font-bold text-amber-700">${item.price}</span>
-                            <a href="https://wa.me/18194327907?text=Bonjour%2C%20je%20voudrais%20commander%20${encodeURIComponent(item.name)}" 
-                               target="_blank"
-                               class="bg-amber-700 text-white px-6 py-3 rounded-2xl text-sm font-medium flex items-center gap-2 hover:bg-amber-800">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Commander
-                            </a>
-                        </div>
-                    </div>
-                `
-                grid.appendChild(card)
-            })
-        }
-
         // ================== MOBILE MENU ==================
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu')
@@ -681,9 +560,6 @@
             showSlide(0)
             startAutoSlide()
             
-            // Menu
-            renderMenu()
-            
             // Formulaire
             const form = document.getElementById('contact-form')
             form.addEventListener('submit', handleFormSubmit)
@@ -692,7 +568,6 @@
             window.addEventListener('scroll', handleScroll)
             
             console.log('%c✅ Site Pâtisserie Syrienne chargé avec succès !', 'background:#d4af77;color:#222;font-size:13px;padding:4px 8px;border-radius:4px')
-            console.log('Tu peux maintenant modifier les textes, prix, images et liens facilement dans le code.')
         }
     </script>
 </body>
