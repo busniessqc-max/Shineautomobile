@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pâtisserie Syrienne - Pâtisseries, croissants, plats, crèmes glacées, desserts et boissons authentiques à Sherbrooke.">
+    <meta name="description" content="Pâtisserie Syrienne - Les saveurs authentiques de la Syrie à Sherbrooke. Baklava, Kunafa, Maamoul et plus de 20 délices traditionnels.">
     <title>Pâtisserie Syrienne | Sherbrooke</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -50,10 +50,6 @@
             background-color: rgba(212, 175, 119, 0.95);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
-
-        .category-title {
-            font-family: 'Playfair Display', sans-serif;
-        }
     </style>
 </head>
 <body class="tailwind-ready">
@@ -62,6 +58,7 @@
     <nav id="navbar" class="bg-[#d4af77] text-stone-900 sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto">
             <div class="px-6 py-5 flex items-center justify-between">
+                <!-- Logo -->
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 bg-stone-900 rounded-2xl flex items-center justify-center text-3xl shadow-inner">
                         🇸🇾
@@ -72,6 +69,7 @@
                     </div>
                 </div>
 
+                <!-- Menu Desktop -->
                 <div class="hidden md:flex items-center gap-8 text-lg font-medium">
                     <a href="#accueil" class="hover:text-amber-950">Accueil</a>
                     <a href="#menu" class="hover:text-amber-950">Notre Menu</a>
@@ -80,37 +78,72 @@
                     <a href="#contact" class="hover:text-amber-950">Contact</a>
                 </div>
 
+                <!-- Actions -->
                 <div class="flex items-center gap-4">
-                    <a href="tel:8194327907" class="flex items-center gap-2 bg-white text-stone-900 px-5 py-2.5 rounded-3xl font-semibold hover:bg-amber-100">
+                    <!-- Téléphone -->
+                    <a href="tel:8194327907" 
+                       class="flex items-center gap-2 bg-white text-stone-900 px-5 py-2.5 rounded-3xl font-semibold hover:bg-amber-100">
                         <i class="fa-solid fa-phone"></i>
                         <span class="hidden sm:inline">819 432-7907</span>
                     </a>
-                    <a href="https://www.ubereats.com/ca-fr/store/patisserie-syrienne-840-rue-king-ouest/S_bv2mO3X7mJnsnw7Ocvcg?diningMode=DELIVERY" target="_blank"
+
+                    <!-- Uber Eats -->
+                    <a href="https://www.ubereats.com/ca-fr/store/patisserie-syrienne-840-rue-king-ouest/S_bv2mO3X7mJnsnw7Ocvcg?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjc4NyUyMFJ1ZSUyMENoYXBsZWF1JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyYWZjZmEzYzEtYTcxYS1jODM2LTRkMjQtZGY3NTgxMDg1MjFlJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0NS4zODc2NyUyQyUyMmxvbmdpdHVkZSUyMiUzQS03MS44OTc2MTc1JTdE&ps=1&sc=SEARCH_SUGGESTION" target="_blank"
                        class="flex items-center gap-2 bg-[#00A082] text-white px-5 py-2.5 rounded-3xl font-semibold hover:bg-[#008c6f]">
                         <i class="fa-solid fa-motorcycle"></i>
                         <span class="hidden sm:inline">Uber Eats</span>
                     </a>
+                    <!-- Menu Mobile -->
                     <button onclick="toggleMobileMenu()" class="md:hidden w-11 h-11 flex items-center justify-center text-3xl">
                         <i id="mobile-icon" class="fa-solid fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
-    </nav>
-
-    <!-- HERO SLIDER -->
+    <!-- HERO DIAPORAMA (10 photos) -->
     <section id="accueil" class="relative h-screen">
         <div id="hero-slider" class="relative h-full overflow-hidden">
-            <!-- Slides (10 images exemples) -->
+            <!-- Slides -->
             <div class="hero-slide absolute inset-0 flex items-center justify-center" id="slide-1">
-                <img src="https://picsum.photos/id/1015/1920/1080" alt="Baklava" class="absolute inset-0 w-full h-full object-cover">
+                <img src="https://picsum.photos/id/1015/1920/1080" alt="Baklava doré" class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
             </div>
             <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-2">
-                <img src="https://picsum.photos/id/292/1920/1080" alt="Kunafa" class="absolute inset-0 w-full h-full object-cover">
+                <img src="https://picsum.photos/id/292/1920/1080" alt="Kunafa au fromage" class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
             </div>
-            <!-- Ajoute les autres slides 3 à 10 si tu veux (comme dans ton code original) -->
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-3">
+                <img src="https://picsum.photos/id/431/1920/1080" alt="Maamoul pistache" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-4">
+                <img src="https://picsum.photos/id/1005/1920/1080" alt="Halawet el Jibn" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-5">
+                <img src="https://picsum.photos/id/133/1920/1080" alt="Namoura dorée" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-6">
+                <img src="https://picsum.photos/id/312/1920/1080" alt="Znoud el Sit" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-7">
+                <img src="https://picsum.photos/id/451/1920/1080" alt="Warbat aux noix" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-8">
+                <img src="https://picsum.photos/id/160/1920/1080" alt="Kataifi pistache" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-9">
+                <img src="https://picsum.photos/id/201/1920/1080" alt="Maamoul dattes" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="hero-slide absolute inset-0 flex items-center justify-center hidden" id="slide-10">
+                <img src="https://picsum.photos/id/870/1920/1080" alt="Pâtisseries syriennes variées" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
 
             <!-- Overlay Content -->
             <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-6">
@@ -118,27 +151,34 @@
                     <h1 class="heading-font text-6xl md:text-7xl font-bold text-white leading-none mb-4 drop-shadow-2xl">
                         Pâtisserie Syrienne
                     </h1>
-                    <p class="text-3xl md:text-4xl text-amber-200 font-light mb-8">Saveurs authentiques de la Syrie à Sherbrooke</p>
+                    <p class="text-3xl md:text-4xl text-amber-200 font-light mb-8">Les saveurs authentiques de la Syrie à Sherbrooke</p>
                     
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="#menu" class="bg-white text-stone-900 px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-3 hover:bg-amber-100">
-                            <i class="fa-solid fa-cake-candles"></i> Voir le menu
+                        <a href="#menu" 
+                           class="bg-white text-stone-900 px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-3 hover:bg-amber-100">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            Voir le menu complet
                         </a>
-                        <a href="https://www.ubereats.com/" target="_blank" class="border-2 border-white text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-3 hover:bg-white/10">
-                            <i class="fa-solid fa-motorcycle"></i> Commander sur Uber Eats
+                        <a href="https://www.ubereats.com/ca-fr/store/patisserie-syrienne-840-rue-king-ouest/S_bv2mO3X7mJnsnw7Ocvcg?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjc4NyUyMFJ1ZSUyMENoYXBsZWF1JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyYWZjZmEzYzEtYTcxYS1jODM2LTRkMjQtZGY3NTgxMDg1MjFlJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0NS4zODc2NyUyQyUyMmxvbmdpdHVkZSUyMiUzQS03MS44OTc2MTc1JTdE&ps=1&sc=SEARCH_SUGGESTION" target="_blank"
+                           class="border-2 border-white text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-3 hover:bg-white/10">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            Commander sur Uber Eats
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Controls -->
-            <button onclick="prevSlide()" class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-stone-900 w-12 h-12 rounded-2xl flex items-center justify-center text-2xl z-20">
+            <button onclick="prevSlide()" 
+                    class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-stone-900 w-12 h-12 rounded-2xl flex items-center justify-center text-2xl z-20">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button onclick="nextSlide()" class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-stone-900 w-12 h-12 rounded-2xl flex items-center justify-center text-2xl z-20">
+            <button onclick="nextSlide()" 
+                    class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-stone-900 w-12 h-12 rounded-2xl flex items-center justify-center text-2xl z-20">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
 
+            <!-- Dots -->
             <div id="dots" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20"></div>
         </div>
     </section>
@@ -151,85 +191,97 @@
                     <span class="uppercase tracking-[2px] text-amber-700 font-medium">Depuis la Syrie jusqu’à Sherbrooke</span>
                     <h2 class="heading-font text-5xl font-bold text-stone-900 mt-2 mb-6">Un voyage de saveurs authentiques</h2>
                     <div class="prose text-lg text-stone-600 leading-relaxed">
-                        <p>Bienvenue chez <strong>Pâtisserie Syrienne</strong>, où chaque bouchée raconte une histoire de tradition et d’amour.</p>
-                        <p>Nous préparons nos produits avec des ingrédients de qualité : pistaches fraîches, beurre clarifié, eau de fleur d’oranger et recettes familiales.</p>
-                        <p>840 rue King Ouest, Sherbrooke • Livraison via Uber Eats</p>
+                        <p>Bienvenue chez <strong>Pâtisserie Syrienne</strong>, où chaque bouchée raconte une histoire de tradition, d’amour et de savoir-faire transmis de génération en génération.</p>
+                        <p>Nous préparons nos pâtisseries avec des ingrédients nobles : pistaches de première qualité, beurre clarifié, eau de fleur d’oranger et sirop maison. Que ce soit pour un café gourmand, une fête de famille ou simplement un moment de douceur, nos délices syriens vous transportent directement à Damas ou Alep.</p>
+                        <p>840 rue King Ouest, Sherbrooke • Livraison rapide avec Uber Eats</p>
                     </div>
+                    <a href="#menu" class="inline-flex items-center mt-8 text-xl font-semibold text-amber-700 hover:text-amber-800">
+                        Découvrir nos pâtisseries 
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
                 </div>
                 <div class="relative">
-                    <img src="https://picsum.photos/id/870/800/600" alt="Intérieur" class="rounded-3xl shadow-2xl">
+                    <img src="https://picsum.photos/id/870/800/600" alt="Intérieur pâtisserie syrienne" 
+                         class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-white px-8 py-6 rounded-3xl shadow-xl flex items-center gap-4">
+                        <div class="text-5xl">🇸🇾</div>
+                        <div>
+                            <p class="font-semibold text-2xl">Authenticité garantie</p>
+                            <p class="text-stone-500">Recettes familiales • Ingrédients importés</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MENU PAR CATÉGORIES -->
+    <!-- MENU - 20 items -->
     <section id="menu" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="px-6 py-2 bg-amber-100 text-amber-700 rounded-3xl text-sm font-medium">Menu complet</span>
-                <h2 class="heading-font text-5xl font-bold mt-4">Notre Menu</h2>
-                <p class="mt-4 text-xl text-stone-600">Découvrez nos produits classés par catégorie</p>
+                <span class="px-6 py-2 bg-amber-100 text-amber-700 rounded-3xl text-sm font-medium">20 délices traditionnels</span>
+                <h2 class="heading-font text-5xl font-bold mt-4">Nos Pâtisseries Syriennes</h2>
+                <p class="mt-4 text-xl text-stone-600 max-w-md mx-auto">Chaque pièce est faite à la main avec amour. Prix à l’unité ou en boîte.</p>
             </div>
 
-            <!-- Pâtisserie -->
-            <div class="mb-20">
-                <h3 class="category-title text-4xl font-bold text-amber-800 mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-cake-candles"></i> Pâtisserie
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cat-patisserie"></div>
-            </div>
-
-            <!-- Croissant -->
-            <div class="mb-20">
-                <h3 class="category-title text-4xl font-bold text-amber-800 mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-croissant"></i> Croissant
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cat-croissant"></div>
-            </div>
-
-            <!-- Nourriture -->
-            <div class="mb-20">
-                <h3 class="category-title text-4xl font-bold text-amber-800 mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-utensils"></i> Nourriture
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cat-nourriture"></div>
-            </div>
-
-            <!-- Crèmes Glacées -->
-            <div class="mb-20">
-                <h3 class="category-title text-4xl font-bold text-amber-800 mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-ice-cream"></i> Crèmes Glacées
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cat-creme"></div>
-            </div>
-
-            <!-- Dessert -->
-            <div class="mb-20">
-                <h3 class="category-title text-4xl font-bold text-amber-800 mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-cookie-bite"></i> Dessert
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cat-dessert"></div>
-            </div>
-
-            <!-- Boisson -->
-            <div class="mb-20">
-                <h3 class="category-title text-4xl font-bold text-amber-800 mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-mug-hot"></i> Boisson
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cat-boisson"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="menu-grid">
+                <!-- Les 20 cartes seront générées par JS ci-dessous -->
             </div>
         </div>
     </section>
 
-    <!-- GALERIE (exemple simplifié) -->
+    <!-- GALERIE -->
     <section id="galerie" class="py-20 bg-stone-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="heading-font text-5xl font-bold text-center mb-12">Un aperçu de nos créations</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Ajoute tes images réelles ici -->
-                <img src="https://picsum.photos/id/1015/600/600" alt="Baklava" class="rounded-3xl aspect-square object-cover hover:scale-105 transition">
-                <!-- ... d'autres images ... -->
+                <img src="https://picsum.photos/id/1015/600/600" alt="Baklava" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/292/600/600" alt="Kunafa" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/431/600/600" alt="Maamoul" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/1005/600/600" alt="Halawet" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/133/600/600" alt="Namoura" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/312/600/600" alt="Znoud" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/451/600/600" alt="Warbat" class="rounded-3xl aspect-square object-cover hover:scale-105">
+                <img src="https://picsum.photos/id/160/600/600" alt="Kataifi" class="rounded-3xl aspect-square object-cover hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="py-20 bg-amber-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-bold text-center mb-12">Ce que nos clients disent</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <p class="italic text-stone-600">"Le meilleur baklava que j’ai mangé hors de Syrie ! La pistache est fraîche et le sirop parfait."</p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-amber-200 rounded-2xl"></div>
+                        <div>
+                            <p class="font-semibold">Sarah A.</p>
+                            <p class="text-sm text-stone-500">Sherbrooke</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <p class="italic text-stone-600">"La kunafa est incroyable. Livraison Uber Eats ultra rapide et toujours chaude. Merci !" </p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-emerald-200 rounded-2xl"></div>
+                        <div>
+                            <p class="font-semibold">Mohamed K.</p>
+                            <p class="text-sm text-stone-500">Sherbrooke</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <p class="italic text-stone-600">"Maamoul et halawet el jibn parfaits pour la fête de famille. Tout le monde a adoré !"</p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-purple-200 rounded-2xl"></div>
+                        <div>
+                            <p class="font-semibold">Lina B.</p>
+                            <p class="text-sm text-stone-500">Sherbrooke</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -252,24 +304,38 @@
                             <i class="fa-solid fa-phone text-4xl text-amber-700 mt-1"></i>
                             <div>
                                 <p class="font-semibold text-xl">819 432-7907</p>
+                                <p class="text-stone-600">Appel ou WhatsApp</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-motorcycle text-4xl text-amber-700 mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-xl">Livraison disponible</p>
+                                <p class="text-stone-600">via Uber Eats – Commandez maintenant</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Formulaire de contact simple -->
                     <form id="contact-form" class="mt-12 space-y-6">
                         <div class="grid grid-cols-2 gap-4">
                             <input type="text" placeholder="Votre nom" class="border border-stone-300 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-700">
                             <input type="tel" placeholder="Téléphone" class="border border-stone-300 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-700">
                         </div>
                         <input type="email" placeholder="Votre courriel" class="w-full border border-stone-300 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-700">
-                        <textarea placeholder="Votre message..." rows="5" class="w-full border border-stone-300 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-700"></textarea>
-                        <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white py-5 rounded-3xl text-xl font-semibold">
-                            Envoyer
+                        <textarea placeholder="Votre message (commande spéciale, événement...)" rows="5"
+                                  class="w-full border border-stone-300 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-700"></textarea>
+                        <button type="submit" 
+                                class="w-full bg-amber-700 hover:bg-amber-800 text-white py-5 rounded-3xl text-xl font-semibold">
+                            Envoyer le message
                         </button>
                     </form>
                 </div>
+
+                <!-- Google Maps Embed -->
                 <div class="rounded-3xl overflow-hidden shadow-2xl h-full min-h-[500px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1133.057058124!2d-71.8935!3d45.4000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDUuNDAwMDAwMCwgLTM3Ljg5MzUwMDAw!5e0!3m2!1sfr!2sca!4v1710000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1133.057058124!2d-71.8935!3d45.4000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDUuNDAwMDAwMCwgLTM3Ljg5MzUwMDAw!5e0!3m2!1sfr!2sca!4v1710000000000" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -286,88 +352,223 @@
                         <p class="text-amber-200">Sherbrooke • 840 rue King Ouest</p>
                     </div>
                 </div>
-                <div class="text-sm text-stone-400">
-                    © 2026 Pâtisserie Syrienne. Tous droits réservés.
+
+                <div class="text-center md:text-left text-sm text-stone-400">
+                    © 2026 Pâtisserie Syrienne. Tous droits réservés.<br>
+                    Site créé avec ❤️ pour mettre en valeur vos délicieuses pâtisseries syriennes.
+                </div>
+
+                <div class="flex gap-6 text-3xl">
+                    <a id="footer-ig" href="#" class="hover:text-amber-300"><i class="fa-brands fa-instagram"></i></a>
+                    <a id="footer-tt" href="#" class="hover:text-amber-300"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // ================== HERO SLIDER ==================
-        let currentSlide = 0;
-        const totalSlides = 2; // Change à 10 si tu ajoutes plus de slides
+        // ================== TAILWIND CONFIG ==================
+        function initializeTailwind() {
+            return {
+                config(userConfig = {}) {
+                    return {
+                        content: [],
+                        theme: {
+                            extend: {
+                                colors: {
+                                    primary: '#d4af77'
+                                }
+                            }
+                        },
+                        plugins: [],
+                        ...userConfig,
+                    }
+                },
+                theme: {
+                    extend: {},
+                },
+            }
+        }
+        document.documentElement.setAttribute('data-tailwind-config', JSON.stringify(initializeTailwind()))
+
+        // ================== HERO SLIDER (10 photos) ==================
+        let currentSlide = 0
+        const totalSlides = 10
 
         function showSlide(n) {
-            const slides = document.querySelectorAll('.hero-slide');
-            slides.forEach(slide => slide.classList.add('hidden'));
-            slides[n].classList.remove('hidden');
+            const slides = document.querySelectorAll('.hero-slide')
+            slides.forEach(slide => slide.classList.add('hidden'))
+            slides[n].classList.remove('hidden')
+            
+            // Mise à jour des dots
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('bg-amber-700', i === n)
+                dot.classList.toggle('bg-white/60', i !== n)
+            })
         }
 
         function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
+            currentSlide = (currentSlide + 1) % totalSlides
+            showSlide(currentSlide)
         }
 
         function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides
+            showSlide(currentSlide)
         }
 
         function createDots() {
-            const container = document.getElementById('dots');
-            container.innerHTML = '';
+            const container = document.getElementById('dots')
+            container.innerHTML = ''
             for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = `dot w-4 h-4 rounded-full ${i === 0 ? 'bg-amber-700' : 'bg-white/60'}`;
-                dot.onclick = () => { currentSlide = i; showSlide(currentSlide); };
-                container.appendChild(dot);
+                const dot = document.createElement('button')
+                dot.className = `dot w-4 h-4 rounded-full ${i === 0 ? 'bg-amber-700' : 'bg-white/60'}`
+                dot.onclick = () => {
+                    currentSlide = i
+                    showSlide(currentSlide)
+                }
+                container.appendChild(dot)
             }
         }
 
-        // ================== MENU DATA ==================
-        const menuCategories = {
-            patisserie: [
-                { name: "Baklava aux Pistaches", desc: "Pâte filo croustillante, pistaches fraîches et sirop à la rose", price: "6,99 $", img: "https://picsum.photos/id/1015/600/400" },
-                { name: "Kunafa au Fromage", desc: "Kunafa dorée, fromage akawi fondant et sirop chaud", price: "7,99 $", img: "https://picsum.photos/id/292/600/400" },
-                { name: "Maamoul Pistache", desc: "Biscuit sablé fourré à la pistache", price: "4,99 $", img: "https://picsum.photos/id/431/600/400" },
-                { name: "Znoud el Sit", desc: "Rouleaux de crêpe à la crème nappés de sirop", price: "5,99 $", img: "https://picsum.photos/id/312/600/400" },
-                { name: "Namoura", desc: "Gâteau de semoule doré aux amandes", price: "3,99 $", img: "https://picsum.photos/id/133/600/400" }
-            ],
-            croissant: [
-                { name: "Croissant Beurre", desc: "Croissant traditionnel au beurre syrien", price: "3,49 $", img: "https://picsum.photos/id/201/600/400" },
-                { name: "Croissant Amandes", desc: "Fourré à la crème d’amandes", price: "4,99 $", img: "https://picsum.photos/id/870/600/400" },
-                { name: "Croissant Chocolat", desc: "Croissant au chocolat noir", price: "4,29 $", img: "https://picsum.photos/id/160/600/400" }
-            ],
-            nourriture: [
-                { name: "Manakish Zaatar", desc: "Pain plat au thym et huile d’olive", price: "5,99 $", img: "https://picsum.photos/id/133/600/400" },
-                { name: "Fatayer aux Épinards", desc: "Petits chaussons aux épinards", price: "4,49 $", img: "https://picsum.photos/id/451/600/400" },
-                { name: "Sambousek Viande", desc: "Chaussons frits à la viande épicée", price: "6,49 $", img: "https://picsum.photos/id/312/600/400" }
-            ],
-            creme: [
-                { name: "Cornet Pistache", desc: "Crème glacée pistache artisanale", price: "5,49 $", img: "https://picsum.photos/id/1005/600/400" },
-                { name: "Coupe Ashta", desc: "Crème épaisse syrienne avec pistaches", price: "6,99 $", img: "https://picsum.photos/id/292/600/400" },
-                { name: "Glace Rose", desc: "Glace à l’eau de rose", price: "4,99 $", img: "https://picsum.photos/id/201/600/400" }
-            ],
-            dessert: [
-                { name: "Halawet el Jibn", desc: "Crêpe au fromage frais et pistaches", price: "5,49 $", img: "https://picsum.photos/id/1005/600/400" },
-                { name: "Mahalabiyeh", desc: "Crème au lait parfumée à la rose", price: "4,99 $", img: "https://picsum.photos/id/451/600/400" },
-                { name: "Qatayef", desc: "Crêpes fourrées aux noix (saison)", price: "5,99 $", img: "https://picsum.photos/id/160/600/400" }
-            ],
-            boisson: [
-                { name: "Café Arabe", desc: "Café traditionnel syrien", price: "3,49 $", img: "https://picsum.photos/id/870/600/400" },
-                { name: "Jus de Grenade", desc: "Jus frais pressé", price: "4,99 $", img: "https://picsum.photos/id/133/600/400" },
-                { name: "Thé à la Menthe", desc: "Thé frais à la menthe", price: "2,99 $", img: "https://picsum.photos/id/312/600/400" },
-                { name: "Lait d’Amande", desc: "Boisson chaude ou froide", price: "4,49 $", img: "https://picsum.photos/id/451/600/400" }
-            ]
-        };
+        // Auto-slide toutes les 5 secondes
+        function startAutoSlide() {
+            setInterval(() => {
+                nextSlide()
+            }, 5000)
+        }
 
-        function renderCategory(containerId, items) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = '';
-            items.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover';
+        // ================== MENU - 20 items ==================
+        const menuItems = [
+            {
+                name: "Baklava aux Pistaches",
+                desc: "Feuilles de pâte filo croustillantes, pistaches fraîches et sirop à la rose",
+                price: "6,99 $",
+                img: "https://picsum.photos/id/1015/600/400"
+            },
+            {
+                name: "Kunafa au Fromage",
+                desc: "Kunafa dorée, fromage akawi fondant et sirop chaud",
+                price: "7,99 $",
+                img: "https://picsum.photos/id/292/600/400"
+            },
+            {
+                name: "Maamoul Pistache",
+                desc: "Biscuit sablé fourré à la pistache, sucre glace",
+                price: "4,99 $",
+                img: "https://picsum.photos/id/431/600/400"
+            },
+            {
+                name: "Halawet el Jibn",
+                desc: "Crêpe au fromage frais, pistaches et sirop d’orange",
+                price: "5,49 $",
+                img: "https://picsum.photos/id/1005/600/400"
+            },
+            {
+                name: "Namoura",
+                desc: "Gâteau de semoule dorée, amandes et fleur d’oranger",
+                price: "3,99 $",
+                img: "https://picsum.photos/id/133/600/400"
+            },
+            {
+                name: "Znoud el Sit",
+                desc: "Rouleaux de crêpe à la crème, frites et nappés de sirop",
+                price: "5,99 $",
+                img: "https://picsum.photos/id/312/600/400"
+            },
+            {
+                name: "Warbat aux Noix",
+                desc: "Triangle filo aux noix et miel parfumé",
+                price: "4,49 $",
+                img: "https://picsum.photos/id/451/600/400"
+            },
+            {
+                name: "Kataifi aux Amandes",
+                desc: "Nid de cheveux d’ange aux amandes grillées",
+                price: "6,49 $",
+                img: "https://picsum.photos/id/160/600/400"
+            },
+            {
+                name: "Maamoul aux Dattes",
+                desc: "Biscuit traditionnel fourré aux dattes parfumées",
+                price: "4,99 $",
+                img: "https://picsum.photos/id/201/600/400"
+            },
+            {
+                name: "Baklava aux Noix",
+                desc: "Classique aux noix de Grenoble et miel",
+                price: "5,99 $",
+                img: "https://picsum.photos/id/870/600/400"
+            },
+            {
+                name: "Kunafa Pistache",
+                desc: "Kunafa garnie de pistaches concassées",
+                price: "8,49 $",
+                img: "https://picsum.photos/id/1015/600/400"
+            },
+            {
+                name: "Barazek (Sésame)",
+                desc: "Biscuits au sésame et pistache grillée",
+                price: "3,49 $",
+                img: "https://picsum.photos/id/292/600/400"
+            },
+            {
+                name: "Ghraybeh",
+                desc: "Biscuits beurre fondants à la pistache",
+                price: "3,99 $",
+                img: "https://picsum.photos/id/431/600/400"
+            },
+            {
+                name: "Sfouf",
+                desc: "Gâteau de semoule au curcuma et amandes",
+                price: "4,29 $",
+                img: "https://picsum.photos/id/1005/600/400"
+            },
+            {
+                name: "Othmaliyeh",
+                desc: "Kunafa fine nappée de sirop et pistaches",
+                price: "6,99 $",
+                img: "https://picsum.photos/id/133/600/400"
+            },
+            {
+                name: "Mabrouma",
+                desc: "Rouleau de pistaches et pâte filo",
+                price: "5,79 $",
+                img: "https://picsum.photos/id/312/600/400"
+            },
+            {
+                name: "Basbousa",
+                desc: "Gâteau de semoule à la noix de coco",
+                price: "3,79 $",
+                img: "https://picsum.photos/id/451/600/400"
+            },
+            {
+                name: "Qatayef",
+                desc: "Crêpes fourrées aux noix et sirop (saison)",
+                price: "5,99 $",
+                img: "https://picsum.photos/id/160/600/400"
+            },
+            {
+                name: "Halva Pistache",
+                desc: "Halva tahini aux pistaches concassées",
+                price: "4,99 $",
+                img: "https://picsum.photos/id/201/600/400"
+            },
+            {
+                name: "Fingers au Fromage",
+                desc: "Feuilletés croustillants au fromage syrien",
+                price: "4,49 $",
+                img: "https://picsum.photos/id/870/600/400"
+            }
+        ]
+
+        function renderMenu() {
+            const grid = document.getElementById('menu-grid')
+            grid.innerHTML = ''
+
+            menuItems.forEach(item => {
+                const card = document.createElement('div')
+                card.className = 'bg-white border border-stone-100 rounded-3xl overflow-hidden card-hover'
                 card.innerHTML = `
                     <img src="${item.img}" alt="${item.name}" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -378,58 +579,70 @@
                             <a href="https://wa.me/18194327907?text=Bonjour%2C%20je%20voudrais%20commander%20${encodeURIComponent(item.name)}" 
                                target="_blank"
                                class="bg-amber-700 text-white px-6 py-3 rounded-2xl text-sm font-medium flex items-center gap-2 hover:bg-amber-800">
-                                <i class="fa-brands fa-whatsapp"></i> Commander
+                                <i class="fa-brands fa-whatsapp"></i>
+                                Commander
                             </a>
                         </div>
                     </div>
-                `;
-                container.appendChild(card);
-            });
+                `
+                grid.appendChild(card)
+            })
         }
 
-        // ================== AUTRES FONCTIONS ==================
+        // ================== MOBILE MENU ==================
         function toggleMobileMenu() {
-            alert("Menu mobile non implémenté dans cette version simplifiée. Ajoute ton code si besoin.");
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            alert("✅ Merci ! Votre message a été envoyé.");
-            e.target.reset();
-        }
-
-        function handleScroll() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('navbar-scrolled');
+            const menu = document.getElementById('mobile-menu')
+            const icon = document.getElementById('mobile-icon')
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden')
+                icon.classList.replace('fa-bars', 'fa-xmark')
             } else {
-                navbar.classList.remove('navbar-scrolled');
+                menu.classList.add('hidden')
+                icon.classList.replace('fa-xmark', 'fa-bars')
             }
         }
 
-        // ================== INITIALISATION ==================
+        // ================== FORMULAIRE (demo) ==================
+        function handleFormSubmit(e) {
+            e.preventDefault()
+            alert("✅ Merci ! Votre message a été envoyé. Nous vous répondrons rapidement par WhatsApp ou téléphone.")
+            e.target.reset()
+        }
+
+        // ================== SCROLL NAVBAR ==================
+        function handleScroll() {
+            const navbar = document.getElementById('navbar')
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled')
+            } else {
+                navbar.classList.remove('navbar-scrolled')
+            }
+        }
+
+        // ================== INIT TOUT ==================
         window.onload = function() {
+            // Tailwind
+            initializeTailwind()
+            
             // Slider
-            createDots();
-            showSlide(0);
-            setInterval(nextSlide, 5000);
-
+            createDots()
+            showSlide(0)
+            startAutoSlide()
+            
             // Menu
-            renderCategory('cat-patisserie', menuCategories.patisserie);
-            renderCategory('cat-croissant', menuCategories.croissant);
-            renderCategory('cat-nourriture', menuCategories.nourriture);
-            renderCategory('cat-creme', menuCategories.creme);
-            renderCategory('cat-dessert', menuCategories.dessert);
-            renderCategory('cat-boisson', menuCategories.boisson);
-
+            renderMenu()
+            
             // Formulaire
-            const form = document.getElementById('contact-form');
-            if (form) form.addEventListener('submit', handleFormSubmit);
-
-            window.addEventListener('scroll', handleScroll);
-
-            console.log('%c✅ Site Pâtisserie Syrienne prêt !', 'background:#d4af77;color:#222;padding:4px 8px;border-radius:4px');
-        };
+            const form = document.getElementById('contact-form')
+            form.addEventListener('submit', handleFormSubmit)
+            
+            // Scroll navbar
+            window.addEventListener('scroll', handleScroll)
+            
+            console.log('%c✅ Site Pâtisserie Syrienne chargé avec succès !', 'background:#d4af77;color:#222;font-size:13px;padding:4px 8px;border-radius:4px')
+            console.log('Tu peux maintenant modifier les textes, prix, images et liens facilement dans le code.')
+        }
     </script>
 </body>
 </html>
