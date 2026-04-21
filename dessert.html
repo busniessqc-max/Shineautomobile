@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Desserts</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
 
+<body class="bg-stone-50">
+
+<h1 class="text-4xl text-center font-bold my-10">Desserts</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+
+<!-- 13 ARTICLES -->
+<script>
+const desserts = Array.from({length:13}, (_,i)=>({
+    name: "Dessert " + (i+1),
+    priceU: "5.99$",
+    priceK: "29.99$/kg",
+    img: "https://picsum.photos/400/300?random=" + i
+}));
+
+document.write(desserts.map(d=>`
+<div class="bg-white rounded-2xl shadow overflow-hidden">
+<img src="${d.img}" class="w-full h-40 object-cover">
+<div class="p-4">
+<h2 class="font-bold text-xl">${d.name}</h2>
+<p>Unité: ${d.priceU}</p>
+<p>Kilo: ${d.priceK}</p>
+</div>
+</div>
+`).join(""));
+</script>
+
+</div>
+
+</body>
+</html>
