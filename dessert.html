@@ -1,39 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Desserts</title>
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts | Pâtisserie Syrienne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500&amp;display=swap');
+        .tailwind-ready { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', sans-serif; }
+    </style>
 </head>
-
-<body class="bg-stone-50">
-
-<h1 class="text-4xl text-center font-bold my-10">Desserts</h1>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-
-<!-- 13 ARTICLES -->
-<script>
-const desserts = Array.from({length:13}, (_,i)=>({
-    name: "Dessert " + (i+1),
-    priceU: "5.99$",
-    priceK: "29.99$/kg",
-    img: "https://picsum.photos/400/300?random=" + i
-}));
-
-document.write(desserts.map(d=>`
-<div class="bg-white rounded-2xl shadow overflow-hidden">
-<img src="${d.img}" class="w-full h-40 object-cover">
-<div class="p-4">
-<h2 class="font-bold text-xl">${d.name}</h2>
-<p>Unité: ${d.priceU}</p>
-<p>Kilo: ${d.priceK}</p>
-</div>
-</div>
-`).join(""));
-</script>
-
-</div>
-
+<body class="tailwind-ready bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <a href="index.html" class="inline-flex items-center gap-2 mb-10 text-amber-700 hover:text-amber-800 font-medium">← Retour à l'accueil</a>
+        <h1 class="heading-font text-5xl font-bold text-center mb-12">Nos Desserts Syriens</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/1015/600/400" class="w-full h-56 object-cover" alt="Baklava">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Baklava aux Pistaches</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">6,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">68,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/292/600/400" class="w-full h-56 object-cover" alt="Kunafa">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Kunafa au Fromage</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">7,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">75,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/431/600/400" class="w-full h-56 object-cover" alt="Maamoul">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Maamoul Pistache</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">4,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">55,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/1005/600/400" class="w-full h-56 object-cover" alt="Halawet">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Halawet el Jibn</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">5,49 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">58,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/133/600/400" class="w-full h-56 object-cover" alt="Namoura">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Namoura</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">3,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">42,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/312/600/400" class="w-full h-56 object-cover" alt="Znoud">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Znoud el Sit</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">5,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">62,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/451/600/400" class="w-full h-56 object-cover" alt="Warbat">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Warbat aux Noix</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">4,49 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">48,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/160/600/400" class="w-full h-56 object-cover" alt="Kataifi">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Kataifi Pistache</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">6,49 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">65,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/201/600/400" class="w-full h-56 object-cover" alt="Maamoul Dattes">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Maamoul aux Dattes</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">4,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">55,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/870/600/400" class="w-full h-56 object-cover" alt="Basbousa">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Basbousa</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">3,79 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">40,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/133/600/400" class="w-full h-56 object-cover" alt="Othmaliyeh">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Othmaliyeh</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">6,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">70,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/312/600/400" class="w-full h-56 object-cover" alt="Mabrouma">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Mabrouma</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">5,79 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">60,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow card-hover">
+                <img src="https://picsum.photos/id/451/600/400" class="w-full h-56 object-cover" alt="Qatayef">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl">Qatayef (saison)</h3>
+                    <div class="mt-4 flex justify-between">
+                        <div><span class="text-xs text-stone-500">Unité</span><br><span class="text-2xl font-bold text-amber-700">5,99 $</span></div>
+                        <div><span class="text-xs text-stone-500">1 kg</span><br><span class="text-2xl font-bold text-amber-700">62,00 $</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
